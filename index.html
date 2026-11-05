@@ -70,7 +70,9 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);background:var(--paper-2
 .banner .big{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;letter-spacing:.12em;line-height:1}
 .banner .motto{font-size:.95rem;letter-spacing:.2em;line-height:1.6;opacity:.92}
 .hero-main{display:flex;flex-direction:column;gap:20px;min-width:0}
-.hero-photo{aspect-ratio:4/3;max-width:100%;width:100%;object-fit:cover;border-radius:2px;display:block}
+.hero-photo{aspect-ratio:4/3;max-width:100%;width:100%;object-fit:cover;border-radius:2px;display:block;object-position:50% 50%}
+.youth-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:-12px}
+.youth-strip img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px;display:block}
 .hero h1{font-size:clamp(1.7rem,4.2vw,2.8rem)}
 .hero .lead{color:var(--ink-soft);max-width:38em}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap}
@@ -261,7 +263,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     </div>
     <div class="hero-main">
       <img class="hero-photo" src="img/beach-flags.jpg" alt="浜辺で旗を掲げる伊集院支部の生徒と指導者">
-      <h1><span class="ja">心と体を、錬える。<br><span class="nb">総本山のまち・</span><span class="nb">伊集院の空手道場</span></span><span class="en">Train the body, temper the mind.<br>Karate in Ijuin, home of Renshinkan</span></h1>
+      <div class="youth-strip">
+        <img src="img/certificates.jpg" alt="賞状を持つ少年部の生徒">
+        <img src="img/shrine-seiza.jpg" alt="神社での奉納演武で正座する子どもたち">
+        <img src="img/kata.jpg" alt="型を演武する少年部の生徒たち">
+      </div>
+      <h1><span class="ja">あいさつ、集中力、自信。<br><span class="nb">総本山のまち・</span><span class="nb">伊集院の空手道場</span></span><span class="en">Courtesy, focus, confidence.<br>Karate in Ijuin, home of Renshinkan</span></h1>
       <p class="lead"><span class="ja">錬心舘伊集院支部は、子どもから大人まで一緒に稽古する空手道場です。5歳から大人まで、初心者・未経験者も大歓迎。見学・体験は無料です。</span><span class="en">Renshinkan Ijuin is a karate dojo where children and adults train side by side. Ages 5 and up, complete beginners welcome. Trial classes are free.</span></p>
       <div class="cta-row">
         <a class="btn primary" href="#join"><span class="ja">無料体験・見学の申し込み</span><span class="en">Book a free trial class</span></a>
@@ -359,7 +366,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <h2><span class="ja">稽古、大会、そして地域の行事</span><span class="en">Training, tournaments and local festivals</span></h2></div>
       <div class="gallery">
         <figure class="g1"><img src="img/ijuin-flag.jpg" alt="伊集院支部の旗と生徒たち"><figcaption><span class="ja">大会にて、伊集院支部の旗とともに</span><span class="en">With the Ijuin branch flag at a tournament</span></figcaption></figure>
-        <figure class="g2"><img src="img/certificates.jpg" alt="賞状を持つ生徒"><figcaption><span class="ja">賞状を手に</span><span class="en">Proud of their certificates</span></figcaption></figure>
+        <figure class="g2"><img src="img/tournament-team.jpg" alt="大会後の少年部の集合写真"><figcaption><span class="ja">大会を終えて</span><span class="en">After the tournament</span></figcaption></figure>
         <figure class="g3"><img src="img/shrine-kata.jpg" alt="神社での奉納演武"><figcaption><span class="ja">妙円寺詣り 奉納演武</span><span class="en">Myoenji Mairi demonstration</span></figcaption></figure>
         <figure class="g4"><img src="img/tournament-bow.jpg" alt="試合前の礼"><figcaption><span class="ja">礼に始まり、礼に終わる</span><span class="en">Every match begins with a bow</span></figcaption></figure>
         <figure class="g5"><img src="img/beach-group.jpg" alt="海辺での稽古"><figcaption><span class="ja">海辺での特別稽古</span><span class="en">Special training by the sea</span></figcaption></figure>
