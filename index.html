@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>錬心舘 伊集院支部｜少林寺流空手道（日置市伊集院町）</title>
+<meta name="description" content="日置市伊集院町の空手道場、道統少林寺流錬心舘 伊集院支部。5歳から大人まで、初心者歓迎。伊集院中学校（火・金）、妙円寺小学校（水）で稽古。無料体験・見学受付中。">
+<meta name="theme-color" content="#7a1f2b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="錬心舘 伊集院支部｜少林寺流空手道">
+<meta property="og:description" content="5歳から大人まで。初心者歓迎、無料体験・見学受付中。">
+<meta property="og:image" content="img/beach-flags.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='17' fill='%237a1f2b'/%3E%3Ccircle cx='20' cy='20' r='13' fill='none' stroke='%23c08a3e' stroke-width='2.5'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-size='16' font-weight='700' fill='%23fff'%3E%E5%BF%83%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+
+/* Layout: a dojo noticeboard. Vertical-script banner beside the photo, then schedule board, then voices. */
+:root{
+  --paper:#f7f6f2;      /* gi white */
+  --paper-2:#ecebe5;
+  --ink:#1d1b26;
+  --ink-soft:#575466;
+  --maroon:#7a1f2b;     /* 伊集院支部の旗 */
+  --indigo:#2e2a5c;     /* 妙円寺支部の旗 */
+  --gold:#c08a3e;       /* crest ring */
+  --line:#d8d5cc;
+  --on-dark:#f7f6f2;
+  --f-display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#16151c;--paper-2:#201f29;--ink:#eeece6;--ink-soft:#aaa6b8;--maroon:#c7525f;--indigo:#8f88d6;--gold:#d7a75f;--line:#34323f;--on-dark:#f7f6f2;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#16151c;--paper-2:#201f29;--ink:#eeece6;--ink-soft:#aaa6b8;--maroon:#c7525f;--indigo:#8f88d6;--gold:#d7a75f;--line:#34323f;--on-dark:#f7f6f2;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+#site:not(.en) .en, #site.en .ja{display:none!important}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1.35;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.label{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--maroon);font-weight:700}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.crest{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--f-display);font-size:1.05rem;white-space:nowrap}
+.brand small{display:block;font-size:.68rem;color:var(--ink-soft);letter-spacing:.06em;line-height:1.2}
+nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav a{font-size:.85rem;text-decoration:none;padding:6px 10px;border-radius:4px;color:var(--ink-soft)}
+nav a:hover,nav a[aria-current="page"]{color:var(--ink);background:var(--paper-2)}
+.lang{flex:none;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.08em;border:1px solid var(--line);background:transparent;color:var(--ink-soft);padding:4px 8px;border-radius:3px;cursor:pointer}
+.lang:hover{color:var(--ink);border-color:var(--ink-soft)}
+@media (max-width:720px){nav{order:3;width:100%;margin-left:0;justify-content:space-between}.bar{flex-wrap:wrap}.lang{margin-left:auto}nav a{padding:4px 6px;font-size:.8rem}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);padding-block:clamp(28px,5vw,56px) 40px;align-items:stretch}
+.banner{background:var(--maroon);color:var(--on-dark);writing-mode:vertical-rl;font-family:var(--f-display);padding:28px 18px;display:flex;gap:18px;align-items:flex-start;border-radius:2px}
+.banner .big{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;letter-spacing:.12em;line-height:1}
+.banner .motto{font-size:.95rem;letter-spacing:.2em;line-height:1.6;opacity:.92}
+.hero-main{display:flex;flex-direction:column;gap:20px;min-width:0}
+.hero-photo{aspect-ratio:4/3;max-width:100%;width:100%;object-fit:cover;border-radius:2px;display:block}
+.hero h1{font-size:clamp(1.7rem,4.2vw,2.8rem)}
+.hero .lead{color:var(--ink-soft);max-width:38em}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.95rem;padding:12px 20px;border-radius:3px;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+@media (max-width:620px){.hero{grid-template-columns:1fr}.banner{writing-mode:horizontal-tb;flex-direction:column;gap:6px;padding:16px 18px}.banner .big{font-size:2rem;letter-spacing:.2em}}
+
+section{padding-block:56px;border-top:1px solid var(--line)}
+section,#top{scroll-margin-top:96px}
+.sec-head{display:flex;flex-direction:column;gap:6px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(1.4rem,3vw,2rem)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.about .text{display:flex;flex-direction:column;gap:16px;min-width:0;max-width:36em}
+.quote{font-family:var(--f-display);font-size:1.2rem;border-left:3px solid var(--gold);padding-left:16px;line-height:1.7}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:.92rem;margin-top:6px}
+.facts dt{color:var(--maroon);font-weight:700;font-variant-numeric:tabular-nums}
+.facts dd{margin:0;color:var(--ink-soft)}
+.about img{width:100%;max-width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
+.cap{font-size:.78rem;color:var(--ink-soft);margin-top:6px}
+.points{margin-top:48px}
+.points h3{font-size:1.25rem;margin-bottom:18px}
+.points ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 32px}
+.points li{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink-soft);min-width:0}
+.points li b{font-family:var(--f-display);color:var(--ink);font-size:1rem}
+.safety{margin-top:40px;border:1.5px solid var(--indigo);padding:22px 24px;border-radius:2px;display:flex;flex-direction:column;gap:8px;max-width:760px}
+.safety .label{color:var(--indigo)}
+.safety h3{font-size:1.2rem}
+.safety p{color:var(--ink-soft);font-size:.95rem}
+.sensei{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:start}
+.sensei .pic{aspect-ratio:3/4;max-width:100%;background:repeating-linear-gradient(135deg,var(--paper-2) 0 10px,var(--line) 10px 11px);display:grid;place-items:center;color:var(--ink-soft);font-size:.8rem;border-radius:2px}
+.sensei .msg{display:flex;flex-direction:column;gap:14px;max-width:38em;min-width:0}
+.sensei .name{font-family:var(--f-display);font-size:1.3rem;font-weight:800}
+.sensei .rank{font-size:.85rem;color:var(--ink-soft)}
+@media (max-width:620px){.sensei{grid-template-columns:1fr}.sensei .pic{max-width:180px}}
+.for{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
+.for div{background:var(--paper-2);padding:20px;border-radius:2px;min-width:0}
+.for h3{font-size:1.1rem;margin-bottom:6px}
+.for p{font-size:.92rem;color:var(--ink-soft)}
+
+/* schedule board */
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.venue{border:1.5px solid var(--ink);border-radius:2px;overflow:hidden;min-width:0}
+.venue-head{padding:14px 18px;color:var(--on-dark);display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.venue.v1 .venue-head{background:var(--maroon)}
+.venue.v2 .venue-head{background:var(--indigo)}
+.venue-head h3{font-size:1.15rem}
+.days{font-size:.85rem;font-weight:700;letter-spacing:.06em}
+.slots{list-style:none;margin:0;padding:0}
+.slots li{display:grid;grid-template-columns:8.5em 1fr;gap:12px;padding:14px 18px;border-top:1px solid var(--line);align-items:baseline}
+.slots li:first-child{border-top:0}
+.time{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.05rem}
+.who{color:var(--ink-soft);font-size:.92rem}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:20px;max-width:520px}
+.week > span{text-align:center;font-size:.8rem;padding:8px 0;border-radius:2px;background:var(--paper-2);color:var(--ink-soft);font-weight:700}
+.week > span.on1{background:var(--maroon);color:var(--on-dark)}
+.week > span.on2{background:var(--indigo);color:var(--on-dark)}
+.note{font-size:.85rem;color:var(--ink-soft);margin-top:14px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:160px;gap:8px}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:2px;min-width:0}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.gallery figure:hover img{transform:scale(1.03)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;font-size:.75rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 2}
+.g3,.g4,.g5{grid-column:span 2;grid-row:span 1}
+@media (max-width:620px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:130px}.g1{grid-column:span 2}.g2{grid-column:span 1}.g3,.g4,.g5{grid-column:span 1}.g5{grid-column:span 2}}
+
+/* join steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.steps li{list-style:none;display:flex;flex-direction:column;gap:6px;min-width:0}
+.steps li::before{counter-increment:s;content:counter(s);font-family:var(--f-display);font-weight:800;font-size:2rem;color:var(--gold);line-height:1}
+.steps h3{font-size:1.1rem}
+.steps p{font-size:.92rem;color:var(--ink-soft)}
+.steps{padding:0;margin:0}
+.contact{margin-top:32px;background:var(--ink);color:var(--paper);padding:24px;border-radius:2px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center}
+.contact h3{font-size:1.2rem}
+.ph{display:inline-block;border:1px dashed currentColor;padding:2px 10px;border-radius:2px;opacity:.75;font-size:.9rem}
+
+/* voices */
+.voices{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.voice{display:flex;flex-direction:column;background:var(--paper-2);border-radius:2px;overflow:hidden;min-width:0}
+.voice .pic{aspect-ratio:1/1;max-width:100%;background:repeating-linear-gradient(135deg,var(--paper-2) 0 10px,var(--line) 10px 11px);display:grid;place-items:center;color:var(--ink-soft);font-size:.8rem}
+.voice .body{padding:18px;display:flex;flex-direction:column;gap:10px}
+.voice blockquote{margin:0;font-family:var(--f-display);font-size:1.02rem;line-height:1.75}
+.voice .meta{font-size:.8rem;color:var(--ink-soft);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.belt{display:inline-block;width:22px;height:6px;border-radius:1px;border:1px solid var(--line)}
+.sample{font-size:.68rem;font-weight:700;letter-spacing:.1em;color:var(--maroon);border:1px solid var(--maroon);padding:0 6px;border-radius:2px}
+.voices-intro{max-width:40em;color:var(--ink-soft);margin-bottom:28px}
+
+#news{padding-block:28px 40px}
+.news-head{margin-bottom:8px}
+.news-head h2{font-size:1.2rem}
+.news-list{list-style:none;margin:0;padding:0;max-width:760px}
+.news-list li{display:grid;grid-template-columns:7em 1fr;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.news-list time{font-variant-numeric:tabular-nums;color:var(--maroon);font-weight:700;font-size:.88rem}
+.news-list .t{min-width:0}
+.news-empty{color:var(--ink-soft);font-size:.9rem;padding:12px 0}
+@media (max-width:520px){.news-list li{grid-template-columns:1fr auto}.news-list time{grid-column:1/-1}.bring{margin-top:32px}
+.bring h3{font-size:1.05rem;margin-bottom:12px}
+.bring ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.bring li{border:1.5px solid var(--maroon);color:var(--maroon);padding:8px 18px;border-radius:2px;font-weight:700;font-size:.92rem}
+.faq{display:flex;flex-direction:column;max-width:760px}
+.faq details{border-top:1px solid var(--line);padding:14px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;gap:12px;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:var(--f-display);color:var(--maroon);font-weight:800}
+.faq details p{padding:8px 0 0 24px;color:var(--ink-soft);font-size:.95rem}
+.float-cta{position:fixed;z-index:8;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--maroon);color:var(--on-dark);text-decoration:none;font-weight:700;padding:12px 18px;border-radius:3px;box-shadow:0 6px 20px rgba(0,0,0,.18);display:flex;flex-direction:column;align-items:center;line-height:1.3;font-size:.95rem}
+.float-cta small{font-weight:500;font-size:.72rem;opacity:.9}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;width:100%;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.foot-grid b{display:block;color:var(--ink);font-size:.85rem}
+.foot-grid span{font-variant-numeric:tabular-nums}
+footer{padding-bottom:96px}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:.8rem;color:var(--ink-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.nb{display:inline-block}
+.sample{align-self:flex-start}
+/* ---- phone refinements ---- */
+@media (max-width:720px){
+  nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;gap:2px;margin-inline:-4px}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;flex:none;padding:6px 10px}
+}
+@media (max-width:760px){
+  .about{grid-template-columns:1fr;gap:28px}
+  .about figure{order:-1}
+  .about img{aspect-ratio:4/3}
+  .facts{grid-template-columns:5.5em 1fr}
+}
+@media (max-width:620px){
+  .hero{padding-block:20px 32px;gap:16px}
+  .hero h1{font-size:1.55rem}
+  .cta-row .btn{flex:1 1 100%;justify-content:center}
+  section{padding-block:44px}
+  .points li{grid-template-columns:6.5em 1fr}
+  .float-cta{left:0;right:0;bottom:0;border-radius:0;flex-direction:row;justify-content:center;gap:10px;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));box-shadow:0 -4px 16px rgba(0,0,0,.15)}
+  .float-cta small{font-size:.8rem}
+  .voices{grid-template-columns:1fr;gap:14px}
+  .voice{display:grid;grid-template-columns:110px 1fr}
+  .voice .pic{aspect-ratio:auto;height:100%;min-height:140px}
+  .voice .body{padding:14px;gap:8px}
+  .voice blockquote{font-size:.95rem}
+  .contact{padding:20px;flex-direction:column;align-items:flex-start;gap:10px}
+  .contact a{color:inherit}
+  .slots li{grid-template-columns:7.5em 1fr}
+  .faq details p{padding-left:22px}
+}
+@media (max-width:380px){
+  .brand b{font-size:.95rem}
+  .crest{width:28px;height:28px}
+}
+</style>
+</head>
+<body>
+<div id="site">
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg class="crest" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="21" r="15" fill="none" stroke="var(--gold)" stroke-width="3"/><circle cx="20" cy="21" r="10.5" fill="none" stroke="var(--maroon)" stroke-width="1.5"/><text x="20" y="26" text-anchor="middle" font-family="Shippori Mincho B1, serif" font-weight="800" font-size="13" fill="var(--maroon)">心</text><path d="M16 6 q4 -5 8 0 q-4 3 -8 0z" fill="var(--maroon)"/></svg>
+      <span><b>錬心舘 伊集院支部</b><small class="ja">少林寺流空手道</small><small class="en">Shorinji-ryu Karate</small></span>
+    </a>
+    <nav aria-label="main">
+      <a href="#top" data-view="top"><span class="ja">道場</span><span class="en">Dojo</span></a>
+      <a href="#sensei" data-view="top"><span class="ja">指導者</span><span class="en">Instructor</span></a>
+      <a href="#schedule" data-view="top"><span class="ja">稽古日程</span><span class="en">Schedule</span></a>
+      <a href="#voices" data-view="voices"><span class="ja">門下生の声</span><span class="en">Voices</span></a>
+      <a href="#faq" data-view="top"><span class="ja">よくある質問</span><span class="en">FAQ</span></a>
+    </nav>
+    <button class="lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main>
+<!-- ===== TOP VIEW ===== -->
+<div id="view-top">
+  <div class="wrap hero" id="top">
+    <div class="banner" aria-hidden="true">
+      <span class="big">錬心</span>
+      <span class="motto">健全な個の形成より始まる</span>
+    </div>
+    <div class="hero-main">
+      <img class="hero-photo" src="img/beach-flags.jpg" alt="浜辺で旗を掲げる伊集院支部の生徒と指導者">
+      <h1><span class="ja">心と体を、錬える。<br><span class="nb">総本山のまち・</span><span class="nb">伊集院の空手道場</span></span><span class="en">Train the body, temper the mind.<br>Karate in Ijuin, home of Renshinkan</span></h1>
+      <p class="lead"><span class="ja">錬心舘伊集院支部は、子どもから大人まで一緒に稽古する空手道場です。5歳から大人まで、初心者・未経験者も大歓迎。見学・体験は無料です。</span><span class="en">Renshinkan Ijuin is a karate dojo where children and adults train side by side. Ages 5 and up, complete beginners welcome. Trial classes are free.</span></p>
+      <div class="cta-row">
+        <a class="btn primary" href="#join"><span class="ja">無料体験・見学の申し込み</span><span class="en">Book a free trial class</span></a>
+        <a class="btn" href="#schedule"><span class="ja">稽古日程を見る</span><span class="en">See the schedule</span></a>
+      </div>
+    </div>
+  </div>
+
+  <section id="news">
+    <div class="wrap">
+      <div class="news-head"><h2><span class="ja">お知らせ</span><span class="en">News</span></h2></div>
+      <ul class="news-list" id="newsList"></ul>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="about">
+        <div class="text">
+          <div class="sec-head"><span class="label"><span class="ja">錬心舘について</span><span class="en">About Renshinkan</span></span>
+            <h2><span class="ja">70年続く、鹿児島生まれの空手</span><span class="en">Seventy years of karate, born in Kagoshima</span></h2></div>
+          <p><span class="ja">錬心舘は1955年、開祖・保勇（たもつ いさむ）宗家が鹿児島市で開いた道場に始まります。1964年には伊集院町に総本山「拳士ヶ丘」が開かれ、今も伊集院は錬心舘の本拠地です。</span><span class="en">Renshinkan began in 1955, when founder Tamotsu Isamu opened a dojo in Kagoshima City. In 1964 the headquarters, Kenshi-ga-oka, was established in Ijuin, which remains the home of Renshinkan today.</span></p>
+          <p class="quote"><span class="ja">「より健全な社会の建設は、<br>健全な個の形成より始まる」</span><span class="en">“Building a healthier society begins with forming healthy individuals.”</span></p>
+          <p><span class="ja">「空手は型に始まり、型に終わる」。型を稽古の中心に、約束組手、防具を着けた組手を通して、技とともに礼節・精神力・思いやりを育てます。</span><span class="en">“Karate begins and ends with kata.” Kata is the core of training, alongside pre-arranged and protective-gear kumite. Alongside technique, we cultivate courtesy, mental strength and respect for others.</span></p>
+          <dl class="facts">
+            <dt>1955</dt><dd><span class="ja">錬心舘道場 開設（鹿児島市）</span><span class="en">First Renshinkan dojo opens in Kagoshima City</span></dd>
+            <dt>1964</dt><dd><span class="ja">総本山「拳士ヶ丘」開山（伊集院町）</span><span class="en">Headquarters Kenshi-ga-oka founded in Ijuin</span></dd>
+            <dt><span class="ja">毎年10月</span><span class="en">Every Oct.</span></dt><dd><span class="ja">妙円寺詣り 奉納演武（徳重神社）</span><span class="en">Myoenji Mairi demonstration at Tokushige Shrine</span></dd>
+          </dl>
+        </div>
+        <figure style="margin:0">
+          <img src="img/instructors.jpg" alt="徳重神社の前に立つ黒帯の指導者たち">
+          <figcaption class="cap"><span class="ja">指導者（徳重神社にて）</span><span class="en">Our instructors at Tokushige Shrine</span></figcaption>
+        </figure>
+      </div>
+      <div class="points">
+        <h3><span class="ja">空手を習うと、こんな力が身につきます</span><span class="en">What karate builds</span></h3>
+        <ul>
+          <li><b><span class="ja">礼儀</span><span class="en">Courtesy</span></b><span class="ja">あいさつ、正座、礼。道場の外でも自然にできるように。</span><span class="en">Greetings, seiza and bowing, until they become habits outside the dojo too.</span></li>
+          <li><b><span class="ja">集中力・忍耐力</span><span class="en">Focus &amp; perseverance</span></b><span class="ja">型をくり返し稽古し、最後までやり抜く力を養います。</span><span class="en">Repeating kata builds the habit of seeing things through.</span></li>
+          <li><b><span class="ja">体力</span><span class="en">Fitness</span></b><span class="ja">全身を使い、しっかり汗をかきます。</span><span class="en">A full-body workout and a good sweat.</span></li>
+          <li><b><span class="ja">自信</span><span class="en">Confidence</span></b><span class="ja">昇級審査や大会、奉納演武が成長の目標に。</span><span class="en">Gradings, tournaments and shrine demonstrations give clear goals.</span></li>
+          <li><b><span class="ja">護身</span><span class="en">Self-defense</span></b><span class="ja">いざという時に自分の身を守る技と心構え。</span><span class="en">Skills and awareness to protect yourself.</span></li>
+          <li><b><span class="ja">リフレッシュ</span><span class="en">A clear head</span></b><span class="ja">仕事や勉強のあとに、心と体をリセット。</span><span class="en">Reset body and mind after work or study.</span></li>
+        </ul>
+      </div>
+      <div class="safety">
+        <span class="label"><span class="ja">保護者の方へ</span><span class="en">For parents</span></span>
+        <h3><span class="ja">安全を第一に指導しています</span><span class="en">Safety comes first</span></h3>
+        <p><span class="ja">錬心舘では型の稽古を中心に、年齢と段階に合わせて指導します。防具を着けた組手は高校生以上から。小さなお子さまも、基本と型から無理なく始められます。</span><span class="en">Renshinkan training centers on kata, taught step by step for each age. Protective-gear kumite starts from high-school age, so young children begin safely with basics and kata.</span></p>
+      </div>
+      <div class="for">
+        <div><h3><span class="ja">少年部</span><span class="en">Youth</span></h3><p><span class="ja">あいさつ、姿勢、集中力。大会や昇級審査を目標に、仲間と楽しく成長できます。</span><span class="en">Greetings, posture, focus. Kids grow together with friends, working toward gradings and tournaments.</span></p></div>
+        <div><h3><span class="ja">一般部（大人）</span><span class="en">Adults</span></h3><p><span class="ja">体力づくり、護身、心のリフレッシュに。運動経験がなくても、自分のペースで始められます。</span><span class="en">For fitness, self-defense and a clear head. No sports background needed; start at your own pace.</span></p></div>
+        <div><h3><span class="ja">親子で</span><span class="en">Parents &amp; kids</span></h3><p><span class="ja">少年部のあとに一般部が続くので、親子で通う方もいます。</span><span class="en">Adult class follows the youth class, so some parents train with their children.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="wrap">
+      <div class="sec-head"><span class="label"><span class="ja">稽古日程</span><span class="en">Schedule</span></span>
+        <h2><span class="ja">週3回、2つの会場で稽古しています</span><span class="en">Three classes a week, at two venues</span></h2></div>
+      <div class="board">
+        <div class="venue v1">
+          <div class="venue-head"><h3><span class="ja">伊集院中学校</span><span class="en">Ijuin Junior High School</span></h3><span class="days"><span class="ja">火・金</span><span class="en">Tue · Fri</span></span></div>
+          <ul class="slots">
+            <li><span class="time">19:00–20:00</span><span class="who"><span class="ja">少年部</span><span class="en">Youth class</span></span></li>
+            <li><span class="time">20:00–21:00</span><span class="who"><span class="ja">一般部（大人）</span><span class="en">Adult class</span></span></li>
+          </ul>
+        </div>
+        <div class="venue v2">
+          <div class="venue-head"><h3><span class="ja">妙円寺小学校</span><span class="en">Myoenji Elementary School</span></h3><span class="days"><span class="ja">水</span><span class="en">Wed</span></span></div>
+          <ul class="slots">
+            <li><span class="time">19:00–20:00</span><span class="who"><span class="ja">稽古</span><span class="en">Class</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="week" aria-label="週間">
+        <span><span class="ja">月</span><span class="en">Mon</span></span>
+        <span class="on1"><span class="ja">火</span><span class="en">Tue</span></span>
+        <span class="on2"><span class="ja">水</span><span class="en">Wed</span></span>
+        <span><span class="ja">木</span><span class="en">Thu</span></span>
+        <span class="on1"><span class="ja">金</span><span class="en">Fri</span></span>
+        <span><span class="ja">土</span><span class="en">Sat</span></span>
+        <span><span class="ja">日</span><span class="en">Sun</span></span>
+      </div>
+      <p class="note"><span class="ja">※学校行事などで休みになる日があります。見学の前にご連絡ください。</span><span class="en">Classes are occasionally cancelled for school events. Please contact us before visiting.</span></p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head"><span class="label"><span class="ja">道場の様子</span><span class="en">Dojo life</span></span>
+        <h2><span class="ja">稽古、大会、そして地域の行事</span><span class="en">Training, tournaments and local festivals</span></h2></div>
+      <div class="gallery">
+        <figure class="g1"><img src="img/ijuin-flag.jpg" alt="伊集院支部の旗と生徒たち"><figcaption><span class="ja">大会にて、伊集院支部の旗とともに</span><span class="en">With the Ijuin branch flag at a tournament</span></figcaption></figure>
+        <figure class="g2"><img src="img/certificates.jpg" alt="賞状を持つ生徒"><figcaption><span class="ja">賞状を手に</span><span class="en">Proud of their certificates</span></figcaption></figure>
+        <figure class="g3"><img src="img/shrine-kata.jpg" alt="神社での奉納演武"><figcaption><span class="ja">妙円寺詣り 奉納演武</span><span class="en">Myoenji Mairi demonstration</span></figcaption></figure>
+        <figure class="g4"><img src="img/tournament-bow.jpg" alt="試合前の礼"><figcaption><span class="ja">礼に始まり、礼に終わる</span><span class="en">Every match begins with a bow</span></figcaption></figure>
+        <figure class="g5"><img src="img/beach-group.jpg" alt="海辺での稽古"><figcaption><span class="ja">海辺での特別稽古</span><span class="en">Special training by the sea</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="sensei">
+    <div class="wrap">
+      <div class="sec-head"><span class="label"><span class="ja">指導者紹介</span><span class="en">Instructor</span></span>
+        <h2><span class="ja">支部長からのごあいさつ</span><span class="en">A word from the branch head</span></h2></div>
+      <div class="sensei">
+        <div class="pic">写真 / Photo</div>
+        <div class="msg">
+          <div><span class="sample">見本 SAMPLE</span></div>
+          <div><div class="name"><span class="ja">支部長　氏名</span><span class="en">Branch head: Name</span></div><div class="rank"><span class="ja">錬心舘 〇段</span><span class="en">Renshinkan, _ dan</span></div></div>
+          <p><span class="ja">ここに支部長からのメッセージが入ります（3〜4文程度）。</span><span class="en">The branch head's welcome message goes here (3–4 sentences).</span></p>
+          <p><span class="ja">お気軽に道場へお越しください。</span><span class="en">Please feel free to drop by the dojo.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head"><span class="label"><span class="ja">よくある質問</span><span class="en">FAQ</span></span>
+        <h2><span class="ja">はじめる前の、よくあるご質問</span><span class="en">Common questions</span></h2></div>
+      <div class="faq">
+        <details><summary><span class="ja">何歳から始められますか？</span><span class="en">From what age can you start?</span></summary><p><span class="ja">5歳から始められます。大人になってから始める方もいます。</span><span class="en">From age 5. Some people start as adults.</span></p></details>
+        <details><summary><span class="ja">運動や武道の経験がなくても大丈夫ですか？</span><span class="en">Is it OK with no sports or martial-arts experience?</span></summary><p><span class="ja">ほとんどの方が未経験から始めています。基本から一つずつ丁寧に指導します。</span><span class="en">Most people start with no experience. We teach the basics one step at a time.</span></p></details>
+        <details><summary><span class="ja">体力に自信がない人や女性でもできますか？</span><span class="en">What if I'm not very fit?</span></summary><p><span class="ja">はい。型を中心にした稽古なので、自分のペースで体力をつけていけます。</span><span class="en">Yes. Training centers on kata, so you build strength at your own pace.</span></p></details>
+        <details><summary><span class="ja">週に何回通えばいいですか？</span><span class="en">How often should I come?</span></summary><p><span class="ja">稽古は火・水・金の週3回です。通う回数はご相談ください。</span><span class="en">Classes run Tuesday, Wednesday and Friday. We'll help you decide how often to come.</span></p></details>
+        <details><summary><span class="ja">両方の会場に通ってもいいですか？</span><span class="en">Can I train at both venues?</span></summary><p><span class="ja">はい。伊集院中学校と妙円寺小学校、どちらの稽古にも参加できます。</span><span class="en">Yes. You can join classes at both Ijuin JHS and Myoenji ES.</span></p></details>
+        <details><summary><span class="ja">体験・見学は無料ですか？見学だけでもいいですか？</span><span class="en">Is the trial free? Can I just watch?</span></summary><p><span class="ja">無料です。見学だけでも大丈夫です。保護者の方の見学も歓迎します。</span><span class="en">It's free, and just watching is fine. Parents are welcome to watch too.</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <div class="sec-head"><span class="label"><span class="ja">無料体験・見学</span><span class="en">Free trial class</span></span>
+        <h2><span class="ja">はじめての方へ</span><span class="en">Getting started</span></h2></div>
+      <ol class="steps">
+        <li><h3><span class="ja">連絡する</span><span class="en">Get in touch</span></h3><p><span class="ja">見学したい日と会場をお知らせください。</span><span class="en">Tell us which day and venue you'd like to visit.</span></p></li>
+        <li><h3><span class="ja">無料体験・見学</span><span class="en">Free trial</span></h3><p><span class="ja">動きやすい服装でお越しください。見学だけでも大丈夫です。</span><span class="en">Wear comfortable clothes. Just watching is fine too.</span></p></li>
+        <li><h3><span class="ja">入門</span><span class="en">Join</span></h3><p><span class="ja">道着や月謝などは、そのときに詳しくご説明します。入門後の連絡は保護者LINEグループで行います。</span><span class="en">We'll explain the uniform and monthly fees in person. After joining, updates go out through the parents' LINE group.</span></p></li>
+      </ol>
+      <div class="bring">
+        <h3><span class="ja">持ち物はこれだけ</span><span class="en">All you need to bring</span></h3>
+        <ul>
+          <li><span class="ja">動きやすい服装</span><span class="en">Comfortable clothes</span></li>
+          <li><span class="ja">飲み物</span><span class="en">A drink</span></li>
+          <li><span class="ja">タオル</span><span class="en">A towel</span></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3><span class="ja">お問い合わせ</span><span class="en">Contact</span></h3>
+        <span><span class="ja">電話：</span><span class="en">Phone: </span><a href="tel:00000000000" class="ph">000-0000-0000</a></span>
+        <span><span class="ja">メール：</span><span class="en">Email: </span><span class="ph">info@example.jp</span></span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== VOICES VIEW ===== -->
+<div id="view-voices" hidden>
+  <section style="border-top:0">
+    <div class="wrap">
+      <div class="sec-head"><span class="label"><span class="ja">門下生・保護者の声</span><span class="en">Students &amp; parents</span></span>
+        <h2><span class="ja">道場に通うみんなの言葉</span><span class="en">In their own words</span></h2></div>
+      <p class="voices-intro"><span class="ja">少年部の門下生、一般部の門下生、そして保護者の方に、空手を始めたきっかけや道場での変化を聞きました。</span><span class="en">We asked youth students, adult students and parents why they started and what has changed since.</span></p>
+      <div class="voices">
+        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに生徒のメッセージが入ります（2〜3文程度）。</span><span class="en">The student's message goes here (2–3 sentences).</span></blockquote><div class="meta"><span class="belt" style="background:#e9c94b"></span><span class="ja">名前・学年・帯</span><span class="en">Name · grade · belt</span></div></div></article>
+        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに生徒のメッセージが入ります（2〜3文程度）。</span><span class="en">The student's message goes here (2–3 sentences).</span></blockquote><div class="meta"><span class="belt" style="background:#5e9b54"></span><span class="ja">名前・学年・帯</span><span class="en">Name · grade · belt</span></div></div></article>
+        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに一般部のメッセージが入ります。</span><span class="en">An adult student's message goes here.</span></blockquote><div class="meta"><span class="belt" style="background:#1d1b26"></span><span class="ja">名前・一般部・帯</span><span class="en">Name · adult class · belt</span></div></div></article>
+        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに保護者の方のメッセージが入ります（お子さまの変化など）。</span><span class="en">A parent's message goes here (how their child has changed).</span></blockquote><div class="meta"><span class="ja">〇年生の保護者</span><span class="en">Parent of a grade _ student</span></div></div></article>
+      </div>
+      <div class="cta-row" style="margin-top:32px"><a class="btn primary" href="#join"><span class="ja">無料体験・見学の申し込み</span><span class="en">Book a free trial class</span></a></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<a class="float-cta" href="#join"><span class="ja">無料体験・見学</span><span class="en">Free trial</span><small><span class="ja">お申し込みはこちら</span><span class="en">Get in touch</span></small></a>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><b><span class="ja">伊集院中学校（火・金）</span><span class="en">Ijuin JHS (Tue · Fri)</span></b><span class="ja">少年部 19:00–20:00 / 一般部 20:00–21:00</span><span class="en">Youth 19:00–20:00 / Adults 20:00–21:00</span></div>
+      <div><b><span class="ja">妙円寺小学校（水）</span><span class="en">Myoenji ES (Wed)</span></b><span>19:00–20:00</span></div>
+    </div>
+    <span><span class="ja">道統少林寺流錬心舘空手道 伊集院支部</span><span class="en">Shorinji-ryu Renshinkan Karate-do, Ijuin Branch</span></span>
+    <a href="https://renshinkan.or.jp/" target="_blank" rel="noopener"><span class="ja">錬心舘 総本山 公式サイト ↗</span><span class="en">Renshinkan headquarters ↗</span></a>
+  </div>
+</footer>
+</div>
+
+<script type="application/json" id="news-data">[{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
+<script>
+(function(){
+  /* ---- News: edit the list in the <script id="news-data"> block above ---- */
+  var news=[]; try{news=JSON.parse(document.getElementById('news-data').textContent)||[]}catch(err){}
+  var listEl=document.getElementById('newsList');
+  news.sort(function(a,b){return a.date<b.date?1:-1});
+  news.slice(0,8).forEach(function(n){
+    var li=document.createElement('li');
+    var t=document.createElement('time');t.dateTime=n.date;t.textContent=(n.date||'').replace(/-/g,'.');
+    var d=document.createElement('span');d.className='t';
+    var ja=document.createElement('span');ja.className='ja';ja.textContent=n.ja;
+    var en=document.createElement('span');en.className='en';en.textContent=n.en||n.ja;
+    d.appendChild(ja);d.appendChild(en);li.appendChild(t);li.appendChild(d);listEl.appendChild(li);
+  });
+  if(!news.length) document.getElementById('news').hidden=true;
+
+  /* ---- Language toggle ---- */
+  var site=document.getElementById('site'), btn=document.getElementById('langBtn');
+  function setLang(l){
+    site.classList.toggle('en',l==='en');
+    document.documentElement.lang=l;
+    btn.textContent=l==='en'?'日本語':'EN';
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  var saved='ja'; try{saved=localStorage.getItem('lang')||'ja'}catch(e){}
+  setLang(saved);
+  btn.addEventListener('click',function(){setLang(site.classList.contains('en')?'ja':'en')});
+
+  /* ---- Two views: main page and #voices ---- */
+  var top=document.getElementById('view-top'), voices=document.getElementById('view-voices');
+  function route(){
+    var h=location.hash.replace('#',''), v=h==='voices';
+    top.hidden=v; voices.hidden=!v;
+    document.querySelectorAll('nav a').forEach(function(a){
+      var on=(v&&a.dataset.view==='voices')||(!v&&a.getAttribute('href')==='#'+(h||'top'));
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    if(v||!h||h==='top'){window.scrollTo(0,0)}
+    else{var el=document.getElementById(h); if(el) el.scrollIntoView();}
+  }
+  window.addEventListener('hashchange',route); route();
+})();
+</script>
+</body>
+</html>
