@@ -99,8 +99,9 @@ nav a[aria-current="page"]{color:var(--maroon);border-bottom-color:var(--maroon)
 @media (max-width:620px){.hero{grid-template-columns:1fr}.banner{writing-mode:horizontal-tb;flex-direction:column;gap:6px;padding:16px 18px}.banner .big{font-size:2rem;letter-spacing:.2em}}
 
 section{padding-block:56px;border-top:1px solid var(--line)}
-section,#top{scroll-margin-top:96px}
-@media (max-width:980px){section,#top{scroll-margin-top:136px}}
+section,#top,#contact{scroll-margin-top:96px}
+@media (max-width:980px){section,#top,#contact{scroll-margin-top:136px}}
+@media (max-width:620px){section,#top,#contact{scroll-margin-top:196px}}
 .sec-head{display:flex;flex-direction:column;gap:6px;margin-bottom:28px}
 .sec-head h2{font-size:clamp(1.4rem,3vw,2rem)}
 
@@ -207,7 +208,16 @@ section,#top{scroll-margin-top:96px}
 .steps p{font-size:.92rem;color:var(--ink-soft)}
 .steps{padding:0;margin:0}
 .contact{margin-top:32px;background:var(--ink);color:var(--paper);padding:24px;border-radius:2px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center}
-.contact h3{font-size:1.2rem}
+.contact h3{font-size:1.2rem;flex-basis:100%}
+.contact .c-who{flex-basis:100%;margin:0;font-size:.95rem}
+.call{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;text-decoration:none;background:var(--gold);color:#1d1b26;padding:14px 22px;border-radius:6px;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.call svg{grid-row:span 2}
+.call .num{font-size:1.5rem;letter-spacing:.04em;font-variant-numeric:tabular-nums;line-height:1.2}
+.call .lbl{font-size:.78rem;font-weight:500;opacity:.85}
+.call:hover{filter:brightness(1.06)}
+.tel-line{margin-top:10px;font-weight:700}
+.tel-line a{color:var(--maroon);font-size:1.1rem;white-space:nowrap}
+.foot-tel{display:block;font-size:1rem;font-weight:700;color:var(--ink);text-decoration:none;margin-top:4px}
 .contact .vm{flex-basis:100%;margin:0;font-size:.85rem;line-height:1.7;opacity:.85}
 .ph{display:inline-block;border:1px dashed currentColor;padding:2px 10px;border-radius:2px;opacity:.75;font-size:.9rem}
 
@@ -276,7 +286,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   .voice .body{padding:14px;gap:8px}
   .voice blockquote{font-size:.95rem}
   .contact{padding:20px;flex-direction:column;align-items:flex-start;gap:10px}
-  .contact a{color:inherit}
+  .contact a:not(.call){color:inherit}
+  .call{width:100%}
   .slots li{grid-template-columns:7.5em 1fr}
   .faq details p{padding-left:22px}
 }
@@ -444,6 +455,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <span><span class="ja">日</span><span class="en">Sun</span></span>
       </div>
       <p class="note"><span class="ja">※学校行事などで休みになる日があります。見学の前にご連絡ください。</span><span class="en">Classes are occasionally cancelled for school events. Please contact us before visiting.</span></p>
+      <p class="tel-line"><span class="ja">見学・体験のお申し込み：</span><span class="en">To visit or try a class: </span><a href="tel:09013445292">📞 090-1344-5292</a></p>
     </div>
   </section>
 
@@ -520,9 +532,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
           <li><span class="ja">タオル</span><span class="en">A towel</span></li>
         </ul>
       </div>
-      <div class="contact">
-        <h3><span class="ja">お問い合わせ</span><span class="en">Contact</span></h3>
-        <span><span class="ja">電話：</span><span class="en">Phone: </span><a href="tel:09013445292">090-1344-5292</a></span>
+      <div class="contact" id="contact">
+        <h3><span class="ja">お問い合わせ・お申し込み</span><span class="en">Contact &amp; sign-up</span></h3>
+        <p class="c-who"><span class="ja">支部長 吉永（よしなが）まで、お電話ください。</span><span class="en">Please call Yoshinaga-sensei, head of the branch.</span></p>
+        <a class="call" href="tel:09013445292"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span class="num">090-1344-5292</span><span class="lbl"><span class="ja">タップして電話する</span><span class="en">Tap to call</span></span></a>
         <p class="vm"><span class="ja">※知らない番号からのお電話には出られないことがあります。留守番電話に、お名前・ご用件・折り返しの電話番号をお話しください。折り返しご連絡します。</span><span class="en">Sensei may not answer calls from unknown numbers. Please leave your name, reason for calling and a call-back number on the voicemail, and he will call you back.</span></p>
       </div>
     </div>
@@ -554,12 +567,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   <button type="button" class="lb-nav prev" id="lbPrev" aria-label="前の写真 / Previous">‹</button>
   <button type="button" class="lb-nav next" id="lbNext" aria-label="次の写真 / Next">›</button>
 </div>
-<a class="float-cta" href="#join"><span class="ja">無料体験・見学</span><span class="en">Free trial</span><small><span class="ja">お申し込みはこちら</span><span class="en">Get in touch</span></small></a>
+<a class="float-cta" href="#contact"><span class="ja">無料体験・見学</span><span class="en">Free trial</span><small><span class="ja">📞 お電話でお申し込み</span><span class="en">📞 Call to sign up</span></small></a>
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div><b><span class="ja">伊集院中学校（火・金）</span><span class="en">Ijuin JHS (Tue · Fri)</span></b><span class="ja">少年部 19:00–20:00 / 一般部 20:00–21:00</span><span class="en">Youth 19:00–20:00 / Adults 20:00–21:00</span></div>
-      <div><b><span class="ja">妙円寺小学校（水）</span><span class="en">Myoenji ES (Wed)</span></b><span>19:00–20:00</span></div>
+      <div><b><span class="ja">妙円寺小学校（水）</span><span class="en">Myoenji ES (Wed)</span></b><span class="ja">少年部・一般部 合同 19:00–20:00</span><span class="en">Youth &amp; adults 19:00–20:00</span></div>
+      <div><b><span class="ja">お問い合わせ（支部長 吉永）</span><span class="en">Contact (Yoshinaga-sensei)</span></b><a class="foot-tel" href="tel:09013445292">📞 090-1344-5292</a></div>
     </div>
     <span><span class="ja">道統少林寺流錬心舘空手道 伊集院支部</span><span class="en">Shorinji-ryu Renshinkan Karate-do, Ijuin Branch</span></span>
     <a href="https://renshinkan.or.jp/" target="_blank" rel="noopener"><span class="ja">錬心舘 総本山 公式サイト ↗</span><span class="en">Renshinkan headquarters ↗</span></a>
