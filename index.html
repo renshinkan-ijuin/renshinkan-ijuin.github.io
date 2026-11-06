@@ -215,8 +215,14 @@ section,#top,#contact{scroll-margin-top:96px}
 .call .num{font-size:1.5rem;letter-spacing:.04em;font-variant-numeric:tabular-nums;line-height:1.2}
 .call .lbl{font-size:.78rem;font-weight:500;opacity:.85}
 .call:hover{filter:brightness(1.06)}
-.tel-line{margin-top:10px;font-weight:700}
-.tel-line a{color:var(--maroon);font-size:1.1rem;white-space:nowrap}
+.tel-box{margin-top:24px;background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--maroon);border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;max-width:640px}
+.tb-lead{margin:0;font-weight:700;font-size:1rem}
+.tb-vm{margin:0;font-size:.82rem;line-height:1.7;color:var(--ink-soft)}
+.events{margin-top:32px}
+.events h3{font-size:1.15rem;margin-bottom:12px}
+.events ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.events li{background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.9rem;font-weight:700}
+@media (max-width:620px){.tel-box{padding:16px}.tel-box .call{width:100%}}
 .foot-tel{display:block;font-size:1rem;font-weight:700;color:var(--ink);text-decoration:none;margin-top:4px}
 .contact .vm{flex-basis:100%;margin:0;font-size:.85rem;line-height:1.7;opacity:.85}
 .ph{display:inline-block;border:1px dashed currentColor;padding:2px 10px;border-radius:2px;opacity:.75;font-size:.9rem}
@@ -455,7 +461,23 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <span><span class="ja">日</span><span class="en">Sun</span></span>
       </div>
       <p class="note"><span class="ja">※学校行事などで休みになる日があります。見学の前にご連絡ください。</span><span class="en">Classes are occasionally cancelled for school events. Please contact us before visiting.</span></p>
-      <p class="tel-line"><span class="ja">見学・体験のお申し込み：</span><span class="en">To visit or try a class: </span><a href="tel:09013445292">📞 090-1344-5292</a></p>
+      <div class="tel-box">
+        <p class="tb-lead"><span class="ja">見学・体験のお申し込みはお電話で</span><span class="en">To visit or try a class, please call</span></p>
+        <a class="call" href="tel:09013445292"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span class="num">090-1344-5292</span><span class="lbl"><span class="ja">支部長 吉永・タップして電話する</span><span class="en">Yoshinaga-sensei · tap to call</span></span></a>
+        <p class="tb-vm"><span class="ja">※知らない番号からのお電話には出られないことがあります。留守番電話に、お名前・ご用件・折り返しの電話番号をお話しください。</span><span class="en">Sensei may not answer unknown numbers. Please leave your name, reason for calling and a call-back number on the voicemail.</span></p>
+      </div>
+      <div class="events">
+        <h3><span class="ja">年間行事</span><span class="en">Events through the year</span></h3>
+        <ul>
+          <li><span class="ja">寒稽古</span><span class="en">Winter training (kangeiko)</span></li>
+          <li><span class="ja">県大会</span><span class="en">Prefectural tournament</span></li>
+          <li><span class="ja">夏季大会</span><span class="en">Summer tournament</span></li>
+          <li><span class="ja">全国大会</span><span class="en">National tournament</span></li>
+          <li><span class="ja">妙円寺詣り大会</span><span class="en">Myoenji Mairi tournament</span></li>
+          <li><span class="ja">妙円寺詣り 奉納演武</span><span class="en">Myoenji Mairi dedication demonstration</span></li>
+          <li><span class="ja">日置・川内地区 空手道大会</span><span class="en">Hioki &amp; Sendai district karate tournament</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -581,7 +603,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </footer>
 </div>
 
-<script type="application/json" id="news-data">[{"date":"2026-11-06","ja":"指導者紹介と稽古の内容を掲載しました","en":"Instructor profile and training content added"},{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
+<script type="application/json" id="news-data">[{"date":"2026-11-06","ja":"年間行事を掲載しました","en":"Annual events added"},{"date":"2026-11-06","ja":"指導者紹介と稽古の内容を掲載しました","en":"Instructor profile and training content added"},{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
 <script>
 (function(){
   /* ---- News: edit the list in the <script id="news-data"> block above ---- */
