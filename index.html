@@ -177,13 +177,13 @@ section,#top{scroll-margin-top:96px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:190px;gap:8px}
 .gallery figure{cursor:zoom-in}
 .gallery figure::after{content:"";position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.45) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7'/%3E%3C/svg%3E") center/14px no-repeat}
-.gw2{grid-column:span 2;grid-row:span 2}.gw{grid-column:span 2}
+.gw2{grid-column:span 2;grid-row:span 2}.gw{grid-column:span 2}.gfull{grid-column:1/-1;grid-row:span 2}
 .g-hint{font-size:.85rem;color:var(--ink-soft);margin:-16px 0 14px}
 .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:2px;min-width:0}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .gallery figure:hover img{transform:scale(1.03)}
 .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;font-size:.75rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.6))}
-@media (max-width:620px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:140px}}
+@media (max-width:620px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.gfull{grid-row:span 1}}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:#0e0d12;display:flex;flex-direction:column;color:#f2f0ea}
 .lb-top{display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 6px max(16px,env(safe-area-inset-left,0px))}
@@ -429,7 +429,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <div class="venue v2">
           <div class="venue-head"><h3><span class="ja">妙円寺小学校</span><span class="en">Myoenji Elementary School</span></h3><span class="days"><span class="ja">水</span><span class="en">Wed</span></span></div>
           <ul class="slots">
-            <li><span class="time">19:00–20:00</span><span class="who"><span class="ja">稽古</span><span class="en">Class</span></span></li>
+            <li><span class="time">19:00–20:00</span><span class="who"><span class="ja">少年部・一般部 合同</span><span class="en">Youth &amp; adults together</span></span></li>
           </ul>
         </div>
       </div>
@@ -460,6 +460,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <figure tabindex="0" role="button"><img src="img/beach-group.jpg" alt="海辺での稽古"><figcaption><span class="ja">海辺での特別稽古</span><span class="en">Special training by the sea</span></figcaption></figure>
         <figure tabindex="0" role="button"><img src="img/tournament-team.jpg" alt="大会後の少年部の集合写真"><figcaption><span class="ja">大会を終えて</span><span class="en">After the tournament</span></figcaption></figure>
         <figure tabindex="0" role="button"><img src="img/instructors.jpg" alt="徳重神社の前に立つ指導者たち"><figcaption><span class="ja">指導者のみなさん（徳重神社にて）</span><span class="en">Our instructors at Tokushige Shrine</span></figcaption></figure>
+        <figure class="gfull" tabindex="0" role="button"><img src="img/adult-class.jpg" alt="一般部の稽古"><figcaption><span class="ja">一般部（大人）の稽古</span><span class="en">Adult class in training</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -520,8 +521,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       </div>
       <div class="contact">
         <h3><span class="ja">お問い合わせ</span><span class="en">Contact</span></h3>
-        <span><span class="ja">電話：</span><span class="en">Phone: </span><a href="tel:00000000000" class="ph">000-0000-0000</a></span>
-        <span><span class="ja">メール：</span><span class="en">Email: </span><span class="ph">info@example.jp</span></span>
+        <span><span class="ja">電話：</span><span class="en">Phone: </span><a href="tel:09013445292">090-1344-5292</a></span>
       </div>
     </div>
   </section>
