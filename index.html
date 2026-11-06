@@ -221,6 +221,11 @@ section,#top,#contact{scroll-margin-top:96px}
 .events{margin-top:32px}
 .events h3{font-size:1.15rem;margin-bottom:12px}
 .events ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.exams dl{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;align-items:center;margin:0}
+.exams dt{font-weight:700;font-size:.92rem}
+.exams dd{margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.exams .m{background:var(--indigo);color:var(--on-dark);border-radius:4px;padding:4px 10px;font-size:.85rem;font-weight:700;font-variant-numeric:tabular-nums}
+@media (max-width:620px){.exams dl{grid-template-columns:1fr;gap:6px}.exams dd{margin-bottom:10px}}
 .events li{background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.9rem;font-weight:700}
 @media (max-width:620px){.tel-box{padding:16px}.tel-box .call{width:100%}}
 .foot-tel{display:block;font-size:1rem;font-weight:700;color:var(--ink);text-decoration:none;margin-top:4px}
@@ -478,6 +483,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
           <li><span class="ja">日置・川内地区 空手道大会</span><span class="en">Hioki &amp; Sendai district karate tournament</span></li>
         </ul>
       </div>
+      <div class="events exams">
+        <h3><span class="ja">審査</span><span class="en">Grading examinations</span></h3>
+        <dl>
+          <dt><span class="ja">昇級審査</span><span class="en">Kyu grading (coloured belts)</span></dt>
+          <dd><span class="m"><span class="ja">3月</span><span class="en">Mar</span></span><span class="m"><span class="ja">5月</span><span class="en">May</span></span><span class="m"><span class="ja">9月</span><span class="en">Sep</span></span><span class="m"><span class="ja">12月</span><span class="en">Dec</span></span></dd>
+          <dt><span class="ja">昇段審査（総本山）</span><span class="en">Dan grading (black belt), at the headquarters</span></dt>
+          <dd><span class="m"><span class="ja">3月</span><span class="en">Mar</span></span><span class="m"><span class="ja">6月</span><span class="en">Jun</span></span><span class="m"><span class="ja">11月</span><span class="en">Nov</span></span></dd>
+        </dl>
+      </div>
     </div>
   </section>
 
@@ -603,7 +617,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </footer>
 </div>
 
-<script type="application/json" id="news-data">[{"date":"2026-11-06","ja":"年間行事を掲載しました","en":"Annual events added"},{"date":"2026-11-06","ja":"指導者紹介と稽古の内容を掲載しました","en":"Instructor profile and training content added"},{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
+<script type="application/json" id="news-data">[{"date":"2026-11-06","ja":"年間行事と審査の日程を掲載しました","en":"Annual events and grading dates added"},{"date":"2026-11-06","ja":"指導者紹介と稽古の内容を掲載しました","en":"Instructor profile and training content added"},{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
 <script>
 (function(){
   /* ---- News: edit the list in the <script id="news-data"> block above ---- */
