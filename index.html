@@ -9,7 +9,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="錬心舘 伊集院支部｜少林寺流空手道">
 <meta property="og:description" content="5歳から大人まで。初心者歓迎、無料体験・見学受付中。">
-<meta property="og:image" content="img/beach-flags.jpg">
+<meta property="og:image" content="https://peertal.github.io/renshinkan/img/beach-flags.jpg">
+<meta property="og:url" content="https://peertal.github.io/renshinkan/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='17' fill='%237a1f2b'/%3E%3Ccircle cx='20' cy='20' r='13' fill='none' stroke='%23c08a3e' stroke-width='2.5'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-size='16' font-weight='700' fill='%23fff'%3E%E5%BF%83%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,16 +54,29 @@ a{color:inherit}
 /* header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:16px;padding-block:10px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
-.crest{width:34px;height:34px;flex:none}
-.brand b{font-family:var(--f-display);font-size:1.05rem;white-space:nowrap}
-.brand small{display:block;font-size:.68rem;color:var(--ink-soft);letter-spacing:.06em;line-height:1.2}
-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
-nav a{font-size:.85rem;text-decoration:none;padding:6px 10px;border-radius:4px;color:var(--ink-soft)}
-nav a:hover,nav a[aria-current="page"]{color:var(--ink);background:var(--paper-2)}
-.lang{flex:none;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.08em;border:1px solid var(--line);background:transparent;color:var(--ink-soft);padding:4px 8px;border-radius:3px;cursor:pointer}
-.lang:hover{color:var(--ink);border-color:var(--ink-soft)}
-@media (max-width:720px){nav{order:3;width:100%;margin-left:0;justify-content:space-between}.bar{flex-wrap:wrap}.lang{margin-left:auto}nav a{padding:4px 6px;font-size:.8rem}}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.crest{width:54px;height:54px;flex:none}
+.brand-text{display:flex;flex-direction:column;min-width:0}
+.brand small{display:block;font-size:.7rem;color:var(--ink-soft);letter-spacing:.08em;line-height:1.3;white-space:nowrap}
+.brand b{font-family:var(--f-display);font-size:1.4rem;font-weight:800;white-space:nowrap;line-height:1.25;letter-spacing:.04em}
+.brand b em{font-style:normal;color:var(--maroon)}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{font-size:.95rem;font-weight:700;text-decoration:none;padding:10px 12px 7px;color:var(--ink);border-bottom:3px solid transparent;white-space:nowrap}
+nav a:hover{border-bottom-color:var(--line)}
+nav a[aria-current="page"]{color:var(--maroon);border-bottom-color:var(--maroon)}
+.lang{flex:none;font:inherit;font-size:.8rem;font-weight:700;letter-spacing:.06em;border:1.5px solid var(--ink);background:transparent;color:var(--ink);padding:6px 12px;border-radius:3px;cursor:pointer}
+.lang:hover{background:var(--ink);color:var(--paper)}
+@media (max-width:980px){
+  .bar{flex-wrap:wrap;row-gap:8px;padding-block:10px 0}
+  .lang{margin-left:auto}
+  nav{order:3;width:100%;margin:0 -16px;padding:0 16px 10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:8px;
+      -webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+  nav::-webkit-scrollbar{display:none}
+  nav a{flex:none;font-size:.92rem;padding:8px 15px;border:1.5px solid var(--line);border-radius:999px;background:var(--paper-2)}
+  nav a:hover{border-color:var(--ink-soft)}
+  nav a[aria-current="page"]{background:var(--maroon);border-color:var(--maroon);color:var(--on-dark)}
+  nav a:last-child{margin-right:40px}
+}
 
 /* hero */
 .hero{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);padding-block:clamp(28px,5vw,56px) 40px;align-items:stretch}
@@ -83,6 +97,7 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);background:var(--paper-2
 
 section{padding-block:56px;border-top:1px solid var(--line)}
 section,#top{scroll-margin-top:96px}
+@media (max-width:980px){section,#top{scroll-margin-top:136px}}
 .sec-head{display:flex;flex-direction:column;gap:6px;margin-bottom:28px}
 .sec-head h2{font-size:clamp(1.4rem,3vw,2rem)}
 
@@ -95,6 +110,20 @@ section,#top{scroll-margin-top:96px}
 .facts dd{margin:0;color:var(--ink-soft)}
 .about img{width:100%;max-width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
 .cap{font-size:.78rem;color:var(--ink-soft);margin-top:6px}
+.lineage{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.lineage li{border-top:3px solid var(--gold);padding-top:8px;font-size:.75rem;color:var(--ink-soft);display:flex;flex-direction:column;min-width:0}
+.lineage li:last-child{border-top-color:var(--maroon)}
+.lineage b{font-family:var(--f-display);font-size:1.15rem;color:var(--ink);line-height:1.3}
+.lineage b small{display:block;font-family:var(--f-body);font-size:.68rem;font-weight:500;color:var(--ink-soft)}
+.training{margin-top:48px;background:var(--paper-2);padding:24px;border-radius:2px}
+.training h3{font-size:1.25rem}
+.t-lead{color:var(--ink-soft);font-size:.95rem;margin:6px 0 16px}
+.curr{list-style:none;margin:0;padding:0;counter-reset:c;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px 28px}
+.curr li{counter-increment:c;display:grid;grid-template-columns:auto 1fr;column-gap:12px;font-size:.9rem;color:var(--ink-soft);min-width:0}
+.curr li::before{content:counter(c);grid-row:span 2;font-family:var(--f-display);font-weight:800;font-size:1.6rem;color:var(--gold);line-height:1}
+.curr li b{font-family:var(--f-display);color:var(--ink);font-size:1.02rem}
+.rules{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.rules li{font-size:.85rem;font-weight:700;color:var(--maroon);border:1.5px solid var(--maroon);padding:4px 12px;border-radius:2px;background:var(--paper)}
 .points{margin-top:48px}
 .points h3{font-size:1.25rem;margin-bottom:18px}
 .points ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 32px}
@@ -104,12 +133,19 @@ section,#top{scroll-margin-top:96px}
 .safety .label{color:var(--indigo)}
 .safety h3{font-size:1.2rem}
 .safety p{color:var(--ink-soft);font-size:.95rem}
-.sensei{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:start}
-.sensei .pic{aspect-ratio:3/4;max-width:100%;background:repeating-linear-gradient(135deg,var(--paper-2) 0 10px,var(--line) 10px 11px);display:grid;place-items:center;color:var(--ink-soft);font-size:.8rem;border-radius:2px}
-.sensei .msg{display:flex;flex-direction:column;gap:14px;max-width:38em;min-width:0}
-.sensei .name{font-family:var(--f-display);font-size:1.3rem;font-weight:800}
-.sensei .rank{font-size:.85rem;color:var(--ink-soft)}
-@media (max-width:620px){.sensei{grid-template-columns:1fr}.sensei .pic{max-width:180px}}
+.sensei{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+.sensei .pic{margin:0;max-width:100%;background:#fff;padding:10px;border:1px solid var(--line);border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.sensei .pic img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.sensei .msg{display:flex;flex-direction:column;gap:18px;max-width:38em;min-width:0}
+.sensei .role{font-size:.8rem;font-weight:700;color:var(--maroon);letter-spacing:.06em}
+.sensei .name{font-family:var(--f-display);font-size:1.9rem;font-weight:800;line-height:1.5}
+.sensei .name rt{font-family:var(--f-body);font-size:.42em;font-weight:500;color:var(--ink-soft)}
+.sensei .rank{font-size:.88rem;color:var(--ink-soft)}
+.fav{margin:0;border-left:3px solid var(--gold);padding-left:18px}
+.fav figcaption{font-size:.75rem;font-weight:700;letter-spacing:.12em;color:var(--gold)}
+.fav blockquote{margin:4px 0 0;font-family:var(--f-display);font-size:1.3rem;line-height:1.8}
+.closing{font-weight:700}
+@media (max-width:620px){.sensei{grid-template-columns:1fr;gap:20px}.sensei .pic{max-width:220px}.sensei .name{font-size:1.6rem}.fav blockquote{font-size:1.12rem}}
 .for{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
 .for div{background:var(--paper-2);padding:20px;border-radius:2px;min-width:0}
 .for h3{font-size:1.1rem;margin-bottom:6px}
@@ -135,14 +171,30 @@ section,#top{scroll-margin-top:96px}
 .note{font-size:.85rem;color:var(--ink-soft);margin-top:14px}
 
 /* gallery */
-.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:160px;gap:8px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:190px;gap:8px}
+.gallery figure{cursor:zoom-in}
+.gallery figure::after{content:"";position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.45) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7'/%3E%3C/svg%3E") center/14px no-repeat}
+.gw2{grid-column:span 2;grid-row:span 2}.gw{grid-column:span 2}
+.g-hint{font-size:.85rem;color:var(--ink-soft);margin:-16px 0 14px}
 .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:2px;min-width:0}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .gallery figure:hover img{transform:scale(1.03)}
 .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;font-size:.75rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.6))}
-.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 2}
-.g3,.g4,.g5{grid-column:span 2;grid-row:span 1}
-@media (max-width:620px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:130px}.g1{grid-column:span 2}.g2{grid-column:span 1}.g3,.g4,.g5{grid-column:span 1}.g5{grid-column:span 2}}
+@media (max-width:620px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:140px}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:#0e0d12;display:flex;flex-direction:column;color:#f2f0ea}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 6px max(16px,env(safe-area-inset-left,0px))}
+.lb-count{font-variant-numeric:tabular-nums;font-size:.9rem;opacity:.85}
+.lb-close{font:inherit;font-size:1.8rem;line-height:1;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.lb-track{flex:1;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior:contain}
+.lb-track::-webkit-scrollbar{display:none}
+.lb-slide{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 max(16px,env(safe-area-inset-left,0px)) calc(20px + env(safe-area-inset-bottom,0px));min-width:0}
+.lb-slide img{max-width:100%;max-height:calc(100dvh - 150px);object-fit:contain;border-radius:2px}
+.lb-slide figcaption{font-size:.95rem;text-align:center;max-width:40em}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
+.lb-nav.prev{left:max(12px,env(safe-area-inset-left,0px))}.lb-nav.next{right:max(12px,env(safe-area-inset-right,0px))}
+.lb-nav:disabled{opacity:.25;cursor:default}
+@media (hover:none){.lb-nav{display:none}}
 
 /* join steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
@@ -174,7 +226,8 @@ section,#top{scroll-margin-top:96px}
 .news-list time{font-variant-numeric:tabular-nums;color:var(--maroon);font-weight:700;font-size:.88rem}
 .news-list .t{min-width:0}
 .news-empty{color:var(--ink-soft);font-size:.9rem;padding:12px 0}
-@media (max-width:520px){.news-list li{grid-template-columns:1fr auto}.news-list time{grid-column:1/-1}.bring{margin-top:32px}
+@media (max-width:520px){.news-list li{grid-template-columns:1fr;gap:2px}}
+.bring{margin-top:32px}
 .bring h3{font-size:1.05rem;margin-bottom:12px}
 .bring ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 .bring li{border:1.5px solid var(--maroon);color:var(--maroon);padding:8px 18px;border-radius:2px;font-weight:700;font-size:.92rem}
@@ -199,11 +252,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 .nb{display:inline-block}
 .sample{align-self:flex-start}
 /* ---- phone refinements ---- */
-@media (max-width:720px){
-  nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;gap:2px;margin-inline:-4px}
-  nav::-webkit-scrollbar{display:none}
-  nav a{white-space:nowrap;flex:none;padding:6px 10px}
-}
 @media (max-width:760px){
   .about{grid-template-columns:1fr;gap:28px}
   .about figure{order:-1}
@@ -228,9 +276,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   .slots li{grid-template-columns:7.5em 1fr}
   .faq details p{padding-left:22px}
 }
-@media (max-width:380px){
-  .brand b{font-size:.95rem}
-  .crest{width:28px;height:28px}
+@media (max-width:620px){
+  .crest{width:46px;height:46px}
+  .brand b{font-size:1.2rem}
+  .brand small{font-size:.62rem}
+}
+@media (max-width:360px){
+  .crest{width:40px;height:40px}
+  .brand b{font-size:1.08rem}
 }
 </style>
 </head>
@@ -239,13 +292,23 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top">
-      <svg class="crest" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="21" r="15" fill="none" stroke="var(--gold)" stroke-width="3"/><circle cx="20" cy="21" r="10.5" fill="none" stroke="var(--maroon)" stroke-width="1.5"/><text x="20" y="26" text-anchor="middle" font-family="Shippori Mincho B1, serif" font-weight="800" font-size="13" fill="var(--maroon)">心</text><path d="M16 6 q4 -5 8 0 q-4 3 -8 0z" fill="var(--maroon)"/></svg>
-      <span><b>錬心舘 伊集院支部</b><small class="ja">少林寺流空手道</small><small class="en">Shorinji-ryu Karate</small></span>
+      <svg class="crest" viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="var(--maroon)" stroke="var(--gold)" stroke-width="1.2" stroke-linejoin="round">
+          <path transform="translate(32 8.2)" d="M0 6 C-6 2 -8.5 -1 -7 -3.7 C-5.7 -6 -2.4 -6.1 0 -3.3 C2.4 -6.1 5.7 -6 7 -3.7 C8.5 -1 6 2 0 6 Z"/>
+          <path transform="translate(13.2 55) rotate(-135) scale(.62)" d="M0 6 C-6 2 -8.5 -1 -7 -3.7 C-5.7 -6 -2.4 -6.1 0 -3.3 C2.4 -6.1 5.7 -6 7 -3.7 C8.5 -1 6 2 0 6 Z"/>
+          <path transform="translate(50.8 55) rotate(135) scale(.62)" d="M0 6 C-6 2 -8.5 -1 -7 -3.7 C-5.7 -6 -2.4 -6.1 0 -3.3 C2.4 -6.1 5.7 -6 7 -3.7 C8.5 -1 6 2 0 6 Z"/>
+        </g>
+        <circle cx="32" cy="36" r="20" fill="var(--paper)" stroke="var(--maroon)" stroke-width="4.5"/>
+        <circle cx="32" cy="36" r="15.2" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+        <text x="32" y="42.5" text-anchor="middle" font-family="Shippori Mincho B1, Hiragino Mincho ProN, Yu Mincho, serif" font-weight="800" font-size="18" fill="var(--maroon)">心</text>
+      </svg>
+      <span class="brand-text"><small class="ja">道統少林寺流 錬心舘空手道</small><small class="en">Shorinji-ryu Renshinkan Karate-do</small><b>錬心舘 <em>伊集院支部</em></b></span>
     </a>
     <nav aria-label="main">
-      <a href="#top" data-view="top"><span class="ja">道場</span><span class="en">Dojo</span></a>
-      <a href="#sensei" data-view="top"><span class="ja">指導者</span><span class="en">Instructor</span></a>
+      <a href="#about" data-view="top"><span class="ja">錬心舘とは</span><span class="en">About</span></a>
       <a href="#schedule" data-view="top"><span class="ja">稽古日程</span><span class="en">Schedule</span></a>
+      <a href="#sensei" data-view="top"><span class="ja">指導者</span><span class="en">Instructor</span></a>
+      <a href="#gallery" data-view="top"><span class="ja">ギャラリー</span><span class="en">Gallery</span></a>
       <a href="#voices" data-view="voices"><span class="ja">門下生の声</span><span class="en">Voices</span></a>
       <a href="#faq" data-view="top"><span class="ja">よくある質問</span><span class="en">FAQ</span></a>
     </nav>
@@ -288,21 +351,41 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     <div class="wrap">
       <div class="about">
         <div class="text">
-          <div class="sec-head"><span class="label"><span class="ja">錬心舘について</span><span class="en">About Renshinkan</span></span>
-            <h2><span class="ja">70年続く、鹿児島生まれの空手</span><span class="en">Seventy years of karate, born in Kagoshima</span></h2></div>
-          <p><span class="ja">錬心舘は1955年、開祖・保勇（たもつ いさむ）宗家が鹿児島市で開いた道場に始まります。1964年には伊集院町に総本山「拳士ヶ丘」が開かれ、今も伊集院は錬心舘の本拠地です。</span><span class="en">Renshinkan began in 1955, when founder Tamotsu Isamu opened a dojo in Kagoshima City. In 1964 the headquarters, Kenshi-ga-oka, was established in Ijuin, which remains the home of Renshinkan today.</span></p>
+          <div class="sec-head"><span class="label"><span class="ja">錬心舘とは</span><span class="en">About Renshinkan</span></span>
+            <h2><span class="ja">70年を超えて受け継がれる、鹿児島生まれの空手</span><span class="en">Over 70 years of karate, born in Kagoshima</span></h2></div>
+          <p><span class="ja">錬心舘は1955年11月8日、開祖・保勇（たもつ いさむ）が鹿児島市で創立しました。1964年には伊集院町に総本山「拳士ヶ丘」が開かれ、今も伊集院は錬心舘の本拠地です。現在は三代目宗家・保勇三（たもつ ゆうぞう）先生が道統を受け継いでいます。</span><span class="en">Renshinkan was founded in Kagoshima City on 8 November 1955 by Tamotsu Isamu. In 1964 its headquarters, Kenshi-ga-oka, opened in Ijuin, which is still the home of Renshinkan. Today the third-generation sōke, Tamotsu Yūzō, leads the school.</span></p>
           <p class="quote"><span class="ja">「より健全な社会の建設は、<br>健全な個の形成より始まる」</span><span class="en">“Building a healthier society begins with forming healthy individuals.”</span></p>
-          <p><span class="ja">「空手は型に始まり、型に終わる」。型を稽古の中心に、約束組手、防具を着けた組手を通して、技とともに礼節・精神力・思いやりを育てます。</span><span class="en">“Karate begins and ends with kata.” Kata is the core of training, alongside pre-arranged and protective-gear kumite. Alongside technique, we cultivate courtesy, mental strength and respect for others.</span></p>
+          <p><span class="ja">錬心舘空手道は、この理念のもと、空手道を通じた青少年の育成を目指し、人格の陶冶、精神力の充実強化、道徳心の涵養に努め、社会に貢献する人間の人格形成に携わってきました。</span><span class="en">Guided by this principle, Renshinkan karate-do has worked to raise young people through karate: refining character, strengthening the spirit, nurturing a moral sense, and shaping people who contribute to society.</span></p>
+          <ol class="lineage">
+            <li><span class="ja">開祖</span><span class="en">Founder</span><b>保 勇<small>たもつ いさむ</small></b></li>
+            <li><span class="ja">二代目</span><span class="en">2nd</span><b>保 巌<small>たもつ いわお</small></b></li>
+            <li><span class="ja">三代目宗家</span><span class="en">3rd sōke</span><b>保 勇三<small>たもつ ゆうぞう</small></b></li>
+          </ol>
           <dl class="facts">
-            <dt>1955</dt><dd><span class="ja">錬心舘道場 開設（鹿児島市）</span><span class="en">First Renshinkan dojo opens in Kagoshima City</span></dd>
+            <dt>1955.11.8</dt><dd><span class="ja">錬心舘 創立（鹿児島市）</span><span class="en">Renshinkan founded in Kagoshima City</span></dd>
             <dt>1964</dt><dd><span class="ja">総本山「拳士ヶ丘」開山（伊集院町）</span><span class="en">Headquarters Kenshi-ga-oka founded in Ijuin</span></dd>
             <dt><span class="ja">毎年10月</span><span class="en">Every Oct.</span></dt><dd><span class="ja">妙円寺詣り 奉納演武（徳重神社）</span><span class="en">Myoenji Mairi demonstration at Tokushige Shrine</span></dd>
           </dl>
         </div>
         <figure style="margin:0">
-          <img src="img/instructors.jpg" alt="徳重神社の前に立つ黒帯の指導者たち">
-          <figcaption class="cap"><span class="ja">指導者（徳重神社にて）</span><span class="en">Our instructors at Tokushige Shrine</span></figcaption>
+          <img src="img/soke-beach.jpg" alt="三代目宗家・保勇三先生と門下生たち">
+          <figcaption class="cap"><span class="ja">三代目宗家・保勇三先生を囲んで</span><span class="en">With the third-generation sōke, Tamotsu Yūzō</span></figcaption>
         </figure>
+      </div>
+      <div class="training">
+        <h3><span class="ja">稽古の内容</span><span class="en">What we practise</span></h3>
+        <p class="t-lead"><span class="ja">「空手は型に始まり、型に終わる」。基本から型まで、段階を追って身につけます。</span><span class="en">“Karate begins and ends with kata.” Students learn step by step, from basics to kata.</span></p>
+        <ol class="curr">
+          <li><b><span class="ja">基本</span><span class="en">Basics</span></b><span class="ja">四股突き・空間突き・前蹴り・足刀</span><span class="en">Shiko-zuki, kūkan-zuki, mae-geri, sokutō</span></li>
+          <li><b><span class="ja">前進後退</span><span class="en">Moving forward and back</span></b><span class="ja">手刀受け・上段受け・下段払い・中段受け・猿臂（えんぴ）</span><span class="en">Shutō-uke, jōdan-uke, gedan-barai, chūdan-uke, enpi</span></li>
+          <li><b><span class="ja">拳手法</span><span class="en">Hand techniques</span></b><span class="ja">追い突き・裏拳打ち・手刀打ち・猿臂など9本</span><span class="en">Oi-zuki, uraken, shutō-uchi, enpi and more (9 in all)</span></li>
+          <li><b><span class="ja">正流七法（型）</span><span class="en">The 7 core kata</span></b><span class="ja">半月（セーサン）・南光（アーナンクー）・汪輯（ワンシュウ）・鎮東（チントウ）・五十四歩（ゴジュウシホウ）ほか</span><span class="en">Seisan, Ananku, Wanshu, Chinto, Gojushiho and more</span></li>
+        </ol>
+        <ul class="rules">
+          <li><span class="ja">挨拶は大きな声で</span><span class="en">Greet in a big voice</span></li>
+          <li><span class="ja">返事は歯切れよく</span><span class="en">Answer clearly</span></li>
+          <li><span class="ja">錬心舘礼法をしっかり身につける</span><span class="en">Learn Renshinkan etiquette well</span></li>
+        </ul>
       </div>
       <div class="points">
         <h3><span class="ja">空手を習うと、こんな力が身につきます</span><span class="en">What karate builds</span></h3>
@@ -321,7 +404,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <p><span class="ja">錬心舘では型の稽古を中心に、年齢と段階に合わせて指導します。防具を着けた組手は高校生以上から。小さなお子さまも、基本と型から無理なく始められます。</span><span class="en">Renshinkan training centers on kata, taught step by step for each age. Protective-gear kumite starts from high-school age, so young children begin safely with basics and kata.</span></p>
       </div>
       <div class="for">
-        <div><h3><span class="ja">少年部</span><span class="en">Youth</span></h3><p><span class="ja">あいさつ、姿勢、集中力。大会や昇級審査を目標に、仲間と楽しく成長できます。</span><span class="en">Greetings, posture, focus. Kids grow together with friends, working toward gradings and tournaments.</span></p></div>
+        <div><h3><span class="ja">少年部</span><span class="en">Youth</span></h3><p><span class="ja">あいさつ、姿勢、集中力。大会や昇級審査を目標に、仲間と楽しく成長できます。開祖は「青年は偉大なる前途と無限の可能性を持つ財産なり」と説きました。</span><span class="en">Greetings, posture, focus. Kids grow together with friends, working toward gradings and tournaments. As our founder taught, “Young people are a treasure with a great future and limitless potential.”</span></p></div>
         <div><h3><span class="ja">一般部（大人）</span><span class="en">Adults</span></h3><p><span class="ja">体力づくり、護身、心のリフレッシュに。運動経験がなくても、自分のペースで始められます。</span><span class="en">For fitness, self-defense and a clear head. No sports background needed; start at your own pace.</span></p></div>
         <div><h3><span class="ja">親子で</span><span class="en">Parents &amp; kids</span></h3><p><span class="ja">少年部のあとに一般部が続くので、親子で通う方もいます。</span><span class="en">Adult class follows the youth class, so some parents train with their children.</span></p></div>
       </div>
@@ -331,7 +414,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   <section id="schedule">
     <div class="wrap">
       <div class="sec-head"><span class="label"><span class="ja">稽古日程</span><span class="en">Schedule</span></span>
-        <h2><span class="ja">週3回、2つの会場で稽古しています</span><span class="en">Three classes a week, at two venues</span></h2></div>
+        <h2><span class="ja">週3回、2つの稽古場所で稽古しています</span><span class="en">Three classes a week, at two venues</span></h2></div>
       <div class="board">
         <div class="venue v1">
           <div class="venue-head"><h3><span class="ja">伊集院中学校</span><span class="en">Ijuin Junior High School</span></h3><span class="days"><span class="ja">火・金</span><span class="en">Tue · Fri</span></span></div>
@@ -364,12 +447,16 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     <div class="wrap">
       <div class="sec-head"><span class="label"><span class="ja">道場の様子</span><span class="en">Dojo life</span></span>
         <h2><span class="ja">稽古、大会、そして地域の行事</span><span class="en">Training, tournaments and local festivals</span></h2></div>
-      <div class="gallery">
-        <figure class="g1"><img src="img/ijuin-flag.jpg" alt="伊集院支部の旗と生徒たち"><figcaption><span class="ja">大会にて、伊集院支部の旗とともに</span><span class="en">With the Ijuin branch flag at a tournament</span></figcaption></figure>
-        <figure class="g2"><img src="img/tournament-team.jpg" alt="大会後の少年部の集合写真"><figcaption><span class="ja">大会を終えて</span><span class="en">After the tournament</span></figcaption></figure>
-        <figure class="g3"><img src="img/shrine-kata.jpg" alt="神社での奉納演武"><figcaption><span class="ja">妙円寺詣り 奉納演武</span><span class="en">Myoenji Mairi demonstration</span></figcaption></figure>
-        <figure class="g4"><img src="img/tournament-bow.jpg" alt="試合前の礼"><figcaption><span class="ja">礼に始まり、礼に終わる</span><span class="en">Every match begins with a bow</span></figcaption></figure>
-        <figure class="g5"><img src="img/beach-group.jpg" alt="海辺での稽古"><figcaption><span class="ja">海辺での特別稽古</span><span class="en">Special training by the sea</span></figcaption></figure>
+      <p class="g-hint"><span class="ja">写真をタップすると拡大して見られます</span><span class="en">Tap a photo to view it larger</span></p>
+      <div class="gallery" id="gallery-grid">
+        <figure class="gw2" tabindex="0" role="button"><img src="img/dojo-group.jpg" alt="稽古場での集合写真"><figcaption><span class="ja">稽古のあとに、みんなで</span><span class="en">Everyone together after practice</span></figcaption></figure>
+        <figure tabindex="0" role="button"><img src="img/shrine-kata.jpg" alt="神社での奉納演武"><figcaption><span class="ja">妙円寺詣り 奉納演武</span><span class="en">Myoenji Mairi demonstration</span></figcaption></figure>
+        <figure tabindex="0" role="button"><img src="img/tournament-bow.jpg" alt="試合前の礼"><figcaption><span class="ja">礼に始まり、礼に終わる</span><span class="en">Every match begins with a bow</span></figcaption></figure>
+        <figure class="gw" tabindex="0" role="button"><img src="img/ijuin-flag.jpg" alt="伊集院支部の旗と生徒たち"><figcaption><span class="ja">大会にて、伊集院支部の旗とともに</span><span class="en">With the Ijuin branch flag at a tournament</span></figcaption></figure>
+        <figure tabindex="0" role="button"><img src="img/saori-talk.jpg" alt="道場で話をする僧侶の門下生と子どもたち"><figcaption><span class="ja">僧侶でもある黒帯の門下生のお話</span><span class="en">A talk from one of our black belts, who is also a Buddhist priest</span></figcaption></figure>
+        <figure tabindex="0" role="button"><img src="img/beach-group.jpg" alt="海辺での稽古"><figcaption><span class="ja">海辺での特別稽古</span><span class="en">Special training by the sea</span></figcaption></figure>
+        <figure tabindex="0" role="button"><img src="img/tournament-team.jpg" alt="大会後の少年部の集合写真"><figcaption><span class="ja">大会を終えて</span><span class="en">After the tournament</span></figcaption></figure>
+        <figure tabindex="0" role="button"><img src="img/instructors.jpg" alt="徳重神社の前に立つ指導者たち"><figcaption><span class="ja">指導者のみなさん（徳重神社にて）</span><span class="en">Our instructors at Tokushige Shrine</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -379,12 +466,18 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <div class="sec-head"><span class="label"><span class="ja">指導者紹介</span><span class="en">Instructor</span></span>
         <h2><span class="ja">支部長からのごあいさつ</span><span class="en">A word from the branch head</span></h2></div>
       <div class="sensei">
-        <div class="pic">写真 / Photo</div>
+        <figure class="pic"><img src="img/sensei-sketch.jpg" alt="吉永義昭 支部長の似顔絵（鉛筆画）"></figure>
         <div class="msg">
-          <div><span class="sample">見本 SAMPLE</span></div>
-          <div><div class="name"><span class="ja">支部長　氏名</span><span class="en">Branch head: Name</span></div><div class="rank"><span class="ja">錬心舘 〇段</span><span class="en">Renshinkan, _ dan</span></div></div>
-          <p><span class="ja">ここに支部長からのメッセージが入ります（3〜4文程度）。</span><span class="en">The branch head's welcome message goes here (3–4 sentences).</span></p>
-          <p><span class="ja">お気軽に道場へお越しください。</span><span class="en">Please feel free to drop by the dojo.</span></p>
+          <div>
+            <div class="role"><span class="ja">伊集院支部・妙円寺支部 支部長</span><span class="en">Head of the Ijuin and Myoenji branches</span></div>
+            <div class="name"><span class="ja"><ruby>吉永<rt>よしなが</rt></ruby>　<ruby>義昭<rt>よしあき</rt></ruby></span><span class="en">Yoshinaga Yoshiaki</span></div>
+            <div class="rank"><span class="ja">錬士五段／2018年 総本山に入門／1962年生まれ</span><span class="en">Renshi, 5th dan · Joined the Renshinkan headquarters in 2018 · Born 1962</span></div>
+          </div>
+          <figure class="fav">
+            <figcaption><span class="ja">好きな言葉</span><span class="en">Favourite words</span></figcaption>
+            <blockquote><span class="ja">わたくし自身の将来は、<br>今この瞬間、ここにある。<br>今ここで頑張らず、いつ頑張る。</span><span class="en">My own future is here, in this very moment.<br>If I don't give it my all here and now, when will I?</span></blockquote>
+          </figure>
+          <p class="closing"><span class="ja">空手道を通じて、共に前に進みましょう。</span><span class="en">Let's move forward together through karate-do.</span></p>
         </div>
       </div>
     </div>
@@ -399,7 +492,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <details><summary><span class="ja">運動や武道の経験がなくても大丈夫ですか？</span><span class="en">Is it OK with no sports or martial-arts experience?</span></summary><p><span class="ja">ほとんどの方が未経験から始めています。基本から一つずつ丁寧に指導します。</span><span class="en">Most people start with no experience. We teach the basics one step at a time.</span></p></details>
         <details><summary><span class="ja">体力に自信がない人や女性でもできますか？</span><span class="en">What if I'm not very fit?</span></summary><p><span class="ja">はい。型を中心にした稽古なので、自分のペースで体力をつけていけます。</span><span class="en">Yes. Training centers on kata, so you build strength at your own pace.</span></p></details>
         <details><summary><span class="ja">週に何回通えばいいですか？</span><span class="en">How often should I come?</span></summary><p><span class="ja">稽古は火・水・金の週3回です。通う回数はご相談ください。</span><span class="en">Classes run Tuesday, Wednesday and Friday. We'll help you decide how often to come.</span></p></details>
-        <details><summary><span class="ja">両方の会場に通ってもいいですか？</span><span class="en">Can I train at both venues?</span></summary><p><span class="ja">はい。伊集院中学校と妙円寺小学校、どちらの稽古にも参加できます。</span><span class="en">Yes. You can join classes at both Ijuin JHS and Myoenji ES.</span></p></details>
+        <details><summary><span class="ja">両方の会場に通ってもいいですか？</span><span class="en">Can I train at both venues?</span></summary><p><span class="ja">はい。伊集院中学校と妙円寺小学校、どちらの稽古場所にも参加できます。</span><span class="en">Yes. You can join classes at both Ijuin JHS and Myoenji ES.</span></p></details>
         <details><summary><span class="ja">体験・見学は無料ですか？見学だけでもいいですか？</span><span class="en">Is the trial free? Can I just watch?</span></summary><p><span class="ja">無料です。見学だけでも大丈夫です。保護者の方の見学も歓迎します。</span><span class="en">It's free, and just watching is fine. Parents are welcome to watch too.</span></p></details>
       </div>
     </div>
@@ -410,7 +503,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <div class="sec-head"><span class="label"><span class="ja">無料体験・見学</span><span class="en">Free trial class</span></span>
         <h2><span class="ja">はじめての方へ</span><span class="en">Getting started</span></h2></div>
       <ol class="steps">
-        <li><h3><span class="ja">連絡する</span><span class="en">Get in touch</span></h3><p><span class="ja">見学したい日と会場をお知らせください。</span><span class="en">Tell us which day and venue you'd like to visit.</span></p></li>
+        <li><h3><span class="ja">連絡する</span><span class="en">Get in touch</span></h3><p><span class="ja">見学したい日と稽古場所をお知らせください。</span><span class="en">Tell us which day and venue you'd like to visit.</span></p></li>
         <li><h3><span class="ja">無料体験・見学</span><span class="en">Free trial</span></h3><p><span class="ja">動きやすい服装でお越しください。見学だけでも大丈夫です。</span><span class="en">Wear comfortable clothes. Just watching is fine too.</span></p></li>
         <li><h3><span class="ja">入門</span><span class="en">Join</span></h3><p><span class="ja">道着や月謝などは、そのときに詳しくご説明します。入門後の連絡は保護者LINEグループで行います。</span><span class="en">We'll explain the uniform and monthly fees in person. After joining, updates go out through the parents' LINE group.</span></p></li>
       </ol>
@@ -450,6 +543,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </div>
 </main>
 
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="写真 / Photos">
+  <div class="lb-top"><span class="lb-count" id="lbCount"></span><button type="button" class="lb-close" id="lbClose" aria-label="閉じる / Close">×</button></div>
+  <div class="lb-track" id="lbTrack"></div>
+  <button type="button" class="lb-nav prev" id="lbPrev" aria-label="前の写真 / Previous">‹</button>
+  <button type="button" class="lb-nav next" id="lbNext" aria-label="次の写真 / Next">›</button>
+</div>
 <a class="float-cta" href="#join"><span class="ja">無料体験・見学</span><span class="en">Free trial</span><small><span class="ja">お申し込みはこちら</span><span class="en">Get in touch</span></small></a>
 <footer>
   <div class="wrap">
@@ -463,7 +562,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </footer>
 </div>
 
-<script type="application/json" id="news-data">[{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
+<script type="application/json" id="news-data">[{"date":"2026-11-06","ja":"指導者紹介と稽古の内容を掲載しました","en":"Instructor profile and training content added"},{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
 <script>
 (function(){
   /* ---- News: edit the list in the <script id="news-data"> block above ---- */
@@ -505,6 +604,39 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     else{var el=document.getElementById(h); if(el) el.scrollIntoView();}
   }
   window.addEventListener('hashchange',route); route();
+
+  /* ---- Photo viewer (tap a gallery photo) ---- */
+  var figs=[].slice.call(document.querySelectorAll('#gallery-grid figure'));
+  var lb=document.getElementById('lb'), track=document.getElementById('lbTrack'), count=document.getElementById('lbCount');
+  var prev=document.getElementById('lbPrev'), next=document.getElementById('lbNext'), closeBtn=document.getElementById('lbClose'), lastFocus=null;
+  figs.forEach(function(f){
+    var img=f.querySelector('img'), cap=f.querySelector('figcaption');
+    var sl=document.createElement('figure'); sl.className='lb-slide';
+    var i2=document.createElement('img'); i2.src=img.getAttribute('src'); i2.alt=img.alt; i2.loading='lazy';
+    var c2=document.createElement('figcaption'); c2.innerHTML=cap?cap.innerHTML:'';
+    sl.appendChild(i2); sl.appendChild(c2); track.appendChild(sl);
+  });
+  function cur(){return Math.round(track.scrollLeft/Math.max(1,track.clientWidth))}
+  function upd(){var i=cur(); count.textContent=(i+1)+' / '+figs.length; prev.disabled=i<=0; next.disabled=i>=figs.length-1}
+  function go(i){track.scrollTo({left:i*track.clientWidth,behavior:'smooth'})}
+  function open(i){
+    lastFocus=document.activeElement; lb.hidden=false; document.documentElement.style.overflow='hidden';
+    track.style.scrollBehavior='auto'; track.scrollLeft=i*track.clientWidth; track.style.scrollBehavior=''; upd(); closeBtn.focus();
+  }
+  function close(){lb.hidden=true; document.documentElement.style.overflow=''; if(lastFocus) lastFocus.focus()}
+  figs.forEach(function(f,i){
+    f.addEventListener('click',function(){open(i)});
+    f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}});
+  });
+  track.addEventListener('scroll',function(){window.requestAnimationFrame(upd)},{passive:true});
+  prev.addEventListener('click',function(){go(cur()-1)});
+  next.addEventListener('click',function(){go(cur()+1)});
+  closeBtn.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden) return;
+    if(e.key==='Escape') close(); else if(e.key==='ArrowRight') go(cur()+1); else if(e.key==='ArrowLeft') go(cur()-1);
+  });
+  window.addEventListener('resize',function(){if(!lb.hidden){var i=cur();track.style.scrollBehavior='auto';track.scrollLeft=i*track.clientWidth;track.style.scrollBehavior=''}});
 })();
 </script>
 </body>
