@@ -14,3 +14,4 @@ Static site: `index.html` + `img/`. No build step.
 - **Student voices:** the page is live (`#voices`). Each card is an `<article class="voice">` in `view-voices`; photos are square crops in `img/voice-*.jpg`. To hide the page, comment out the nav link and set `VOICES_ON=false` in the script.
 - **Photos:** put new photos in `img/` (resize to ~1400px wide first) and change the `src="img/..."` paths.
 - Every text appears twice: `<span class="ja">…</span><span class="en">…</span>` — edit both.
+- **Videos:** short clips go in `video/` (compressed MP4, H.264, ~720px). Add a gallery tile like the kata one: `<figure class="gtall gvid" tabindex="0" role="button" data-video="video/NAME.mp4"><img src="img/POSTER.jpg" …>`. Tapping it plays the video in the photo viewer. GitHub limit is 100 MB per file; keep clips well under that.
