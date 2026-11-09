@@ -11,6 +11,6 @@ Static site: `index.html` + `img/`. No build step.
 - **News (お知らせ):** in `index.html`, find `<script type="application/json" id="news-data">` and add an item:
   `{"date":"2026-12-01","ja":"日本語のタイトル","en":"English title"}` (comma between items). Newest shows first; 8 are shown.
 - **Phone / email:** the phone number is in the `.contact` block near the bottom of index.html. No email is shown yet; add a `<span>` line there when you have one.
-- **Student voices:** the page is switched off. To bring it back, restore the nav link (look for "VOICES (hidden for now)") and set `VOICES_ON=true` in the script, then replace the SAMPLE cards in `view-voices` with real photos and messages.
+- **Student voices:** the page is live (`#voices`). Each card is an `<article class="voice">` in `view-voices`; photos are square crops in `img/voice-*.jpg`. To hide the page, comment out the nav link and set `VOICES_ON=false` in the script.
 - **Photos:** put new photos in `img/` (resize to ~1400px wide first) and change the `src="img/..."` paths.
 - Every text appears twice: `<span class="ja">…</span><span class="en">…</span>` — edit both.

@@ -69,16 +69,13 @@ nav a[aria-current="page"]{color:var(--maroon);border-bottom-color:var(--maroon)
 @media (max-width:980px){
   .bar{flex-wrap:wrap;row-gap:8px;padding-block:10px 0}
   .lang{margin-left:auto}
-  nav{order:3;width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:0 0 10px}
+  nav{order:3;width:100%;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:0 0 10px}
   nav a{text-align:center;font-size:.9rem;padding:9px 4px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   nav a:hover{border-color:var(--ink-soft)}
   nav a[aria-current="page"]{background:var(--maroon);border-color:var(--maroon);color:var(--on-dark)}
 }
 @media (max-width:620px){
-  nav{grid-template-columns:repeat(6,1fr)}
-  nav a{grid-column:span 2}
-  nav a:nth-child(4){grid-column:2/4}
-  nav a:nth-child(5){grid-column:4/6}
+  nav{grid-template-columns:repeat(3,1fr)}
   nav a{font-size:.88rem;padding:8px 2px}
 }
 @media (max-width:340px){nav a{font-size:.8rem}
@@ -239,6 +236,7 @@ section,#top,#contact{scroll-margin-top:96px}
 .voices{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
 .voice{display:flex;flex-direction:column;background:var(--paper-2);border-radius:2px;overflow:hidden;min-width:0}
 .voice .pic{aspect-ratio:1/1;max-width:100%;background:repeating-linear-gradient(135deg,var(--paper-2) 0 10px,var(--line) 10px 11px);display:grid;place-items:center;color:var(--ink-soft);font-size:.8rem}
+.voice .pic img{width:100%;height:100%;object-fit:cover;display:block}
 .voice .body{padding:18px;display:flex;flex-direction:column;gap:10px}
 .voice blockquote{margin:0;font-family:var(--f-display);font-size:1.02rem;line-height:1.75}
 .voice .meta{font-size:.8rem;color:var(--ink-soft);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
@@ -338,8 +336,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <a href="#schedule" data-view="top"><span class="ja">稽古日程</span><span class="en">Schedule</span></a>
       <a href="#sensei" data-view="top"><span class="ja">指導者</span><span class="en">Instructor</span></a>
       <a href="#gallery" data-view="top"><span class="ja">ギャラリー</span><span class="en">Gallery</span></a>
-      <!-- VOICES (hidden for now): to bring the student-voices page back, restore this link and set VOICES_ON=true in the script below.
       <a href="#voices" data-view="voices"><span class="ja">門下生の声</span><span class="en">Voices</span></a>
+      <!-- VOICES: to hide the page again, comment out the link above and set VOICES_ON=false in the script below.
       -->
       <a href="#faq" data-view="top"><span class="ja">よくある質問</span><span class="en">FAQ</span></a>
     </nav>
@@ -591,10 +589,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <h2><span class="ja">道場に通うみんなの言葉</span><span class="en">In their own words</span></h2></div>
       <p class="voices-intro"><span class="ja">少年部の門下生、一般部の門下生、そして保護者の方に、空手を始めたきっかけや道場での変化を聞きました。</span><span class="en">We asked youth students, adult students and parents why they started and what has changed since.</span></p>
       <div class="voices">
-        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに生徒のメッセージが入ります（2〜3文程度）。</span><span class="en">The student's message goes here (2–3 sentences).</span></blockquote><div class="meta"><span class="belt" style="background:#e9c94b"></span><span class="ja">名前・学年・帯</span><span class="en">Name · grade · belt</span></div></div></article>
-        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに生徒のメッセージが入ります（2〜3文程度）。</span><span class="en">The student's message goes here (2–3 sentences).</span></blockquote><div class="meta"><span class="belt" style="background:#5e9b54"></span><span class="ja">名前・学年・帯</span><span class="en">Name · grade · belt</span></div></div></article>
-        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに一般部のメッセージが入ります。</span><span class="en">An adult student's message goes here.</span></blockquote><div class="meta"><span class="belt" style="background:#1d1b26"></span><span class="ja">名前・一般部・帯</span><span class="en">Name · adult class · belt</span></div></div></article>
-        <article class="voice"><div class="pic">写真 / Photo</div><div class="body"><span class="sample">見本 SAMPLE</span><blockquote><span class="ja">ここに保護者の方のメッセージが入ります（お子さまの変化など）。</span><span class="en">A parent's message goes here (how their child has changed).</span></blockquote><div class="meta"><span class="ja">〇年生の保護者</span><span class="en">Parent of a grade _ student</span></div></div></article>
+        <article class="voice"><div class="pic"><img src="img/voice-hatono.jpg" alt="鳩野 浩志郎 / Hatono Koshiro" loading="lazy"></div><div class="body"><blockquote><span class="ja">また、錬心館空手がやりたくなって伊集院支部に入り、5年経ちました。今は1指導員として、吉永師範と共に子供達に基本と型を中心に教えています。教えてた子供達が大会で入賞できると本当に嬉しいです。</span><span class="en">I wanted to do Renshinkan karate again, so I joined the Ijuin branch — that was five years ago. Now, as one of the instructors, I teach the children alongside Yoshinaga-shihan, focusing on basics and kata. I am truly happy when the children I have taught win places at tournaments.</span></blockquote><div class="meta"><span class="belt" style="background:#1d1b26"></span><span class="ja">鳩野 浩志郎・指導員（伊集院支部）</span><span class="en">Hatono Koshiro · instructor, Ijuin branch</span></div></div></article>
+        <article class="voice"><div class="pic"><img src="img/voice-kawamoto.jpg" alt="川元くん / Kawamoto-kun" loading="lazy"></div><div class="body"><span class="sample new"><span class="ja">新しい仲間</span><span class="en">New member</span></span><blockquote><span class="ja">妙円寺支部に新しい仲間が加わりました。川元くん（5才）です。よろしくお願いします！</span><span class="en">A new member has joined the Myoenji branch: Kawamoto-kun, age 5. Welcome!</span></blockquote><div class="meta"><span class="belt" style="background:#f4f1ea;border:1px solid var(--line)"></span><span class="ja">川元くん・5才・妙円寺支部</span><span class="en">Kawamoto-kun · age 5 · Myoenji branch</span></div></div></article>
       </div>
       <div class="cta-row" style="margin-top:32px"><a class="btn primary" href="#join"><span class="ja">無料体験・見学の申し込み</span><span class="en">Book a free trial class</span></a></div>
     </div>
@@ -654,7 +650,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   /* ---- Two views: main page and #voices ---- */
   var top=document.getElementById('view-top'), voices=document.getElementById('view-voices');
   function route(){
-    var VOICES_ON=false; /* set to true when the student-voices page is ready */
+    var VOICES_ON=true; /* set to true when the student-voices page is ready */
     var h=location.hash.replace('#',''), v=VOICES_ON&&h==='voices';
     top.hidden=v; voices.hidden=!v;
     document.querySelectorAll('nav a').forEach(function(a){
