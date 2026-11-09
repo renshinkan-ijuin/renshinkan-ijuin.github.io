@@ -237,6 +237,14 @@ section,#top,#contact{scroll-margin-top:96px}
 .contact .vm{flex-basis:100%;margin:0;font-size:.85rem;line-height:1.7;opacity:.85}
 .ph{display:inline-block;border:1px dashed currentColor;padding:2px 10px;border-radius:2px;opacity:.75;font-size:.9rem}
 
+/* featured kata video */
+.feature-video{background:var(--paper-2)}
+.fv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+.fv-media video{width:100%;aspect-ratio:720/760;object-fit:cover;display:block;border-radius:3px;background:#000;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.fv-text{display:flex;flex-direction:column;gap:16px;max-width:30em}
+.fv-text h2{font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.3;margin:0}
+.fv-note{font-size:.82rem;color:var(--ink-soft)}
+@media (max-width:820px){.fv{grid-template-columns:1fr;gap:22px}.fv-media{max-width:520px;margin-inline:auto;width:100%}}
 /* voices */
 .voices{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
 .voice{display:flex;flex-direction:column;background:var(--paper-2);border-radius:2px;overflow:hidden;min-width:0}
@@ -385,6 +393,19 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       </div>
     </div>
   </div>
+
+  <section id="kata-video" class="feature-video">
+    <div class="wrap fv">
+      <div class="fv-media"><video id="fvVideo" muted loop playsinline controls preload="none" poster="img/kata-video-poster.jpg" data-src="video/kata.mp4" aria-label="型の演武 / Kata performance"></video></div>
+      <div class="fv-text">
+        <span class="label"><span class="ja">動画・型の演武</span><span class="en">Video · kata</span></span>
+        <h2><span class="ja">これが、錬心舘の空手。</span><span class="en">This is Renshinkan karate.</span></h2>
+        <p><span class="ja">型は、空手の基本の技をつなげた一連の動きです。一つひとつの技に気持ちを込め、礼に始まり礼に終わる。その積み重ねが、集中力と自信を育てます。</span><span class="en">A kata is a set sequence linking karate's basic techniques. Putting full attention into every move, starting and ending with a bow: this practice builds focus and confidence.</span></p>
+        <p class="fv-note"><span class="ja">▶ 音声付きで見るには、動画の音量ボタンを押してください。</span><span class="en">▶ Tap the volume button on the video to hear the sound.</span></p>
+        <div class="cta-row"><a class="btn primary" href="#join"><span class="ja">無料体験・見学の申し込み</span><span class="en">Book a free trial class</span></a></div>
+      </div>
+    </div>
+  </section>
 
   <section id="news">
     <div class="wrap">
@@ -636,7 +657,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </footer>
 </div>
 
-<script type="application/json" id="news-data">[{"date":"2026-11-06","ja":"年間行事と審査の日程を掲載しました","en":"Annual events and grading dates added"},{"date":"2026-11-06","ja":"指導者紹介と稽古の内容を掲載しました","en":"Instructor profile and training content added"},{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
+<script type="application/json" id="news-data">[{"date":"2026-11-09","ja":"型の演武の動画を掲載しました","en":"Kata performance video added"},{"date":"2026-11-06","ja":"年間行事と審査の日程を掲載しました","en":"Annual events and grading dates added"},{"date":"2026-11-06","ja":"指導者紹介と稽古の内容を掲載しました","en":"Instructor profile and training content added"},{"date":"2026-11-05","ja":"無料体験・見学を随時受け付けています","en":"Free trial classes are open any time"}]</script>
 <script>
 (function(){
   /* ---- News: edit the list in the <script id="news-data"> block above ---- */
@@ -680,6 +701,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   }
   window.addEventListener('hashchange',route); route();
 
+  /* ---- Featured kata video: load and play (muted) only when scrolled into view ---- */
+  (function(){
+    var v=document.getElementById('fvVideo'); if(!v) return;
+    function load(){ if(!v.src){ v.src=v.dataset.src; } }
+    if(!('IntersectionObserver' in window)){ load(); return; }
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){
+      if(e.isIntersecting){ load(); var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
+      else if(!v.paused){ v.pause(); }
+    }); },{threshold:0.4});
+    io.observe(v);
+  })();
   /* ---- Photo viewer (tap a gallery photo) ---- */
   var figs=[].slice.call(document.querySelectorAll('#gallery-grid figure'));
   var lb=document.getElementById('lb'), track=document.getElementById('lbTrack'), count=document.getElementById('lbCount');
